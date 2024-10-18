@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F8F7">
+
+    <TextView
+        android:id="@+id/cm_ms_header_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="36dp"
+        android:text="아래 측정 항목을 체험해 보세요."
+        android:textSize="34sp"
+        android:letterSpacing="-0.01"
+        android:textColor="#1C1C1C"
+        android:fontFamily="@font/font_family"
+        android:textFontWeight="700"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 검사 버튼 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="36dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#F3F8F7"
+            android:orientation="vertical">
+
+            <!-- 외발서기 -->
+            <LinearLayout
+                android:id="@+id/cm_ex_singleleg_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/radius"
+                android:backgroundTint="#FFF"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="40dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="37dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_family"
+                        android:letterSpacing="-0.01"
+                        android:text="외발서기"
+                        android:textColor="#000"
+                        android:textFontWeight="700"
+                        android:textSize="27sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

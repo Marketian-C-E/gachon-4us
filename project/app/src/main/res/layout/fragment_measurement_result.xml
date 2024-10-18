@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/f3f8f7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginHorizontal="57dp">
+        <TextView
+            android:id="@+id/cm_ms_result_header_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{}님의\n측정한 검사 리스트입니다."
+            android:textSize="34sp"
+            android:letterSpacing="-0.01"
+            android:textColor="#1C1C1C"
+            android:fontFamily="@font/font_family"
+            android:textFontWeight="700"
+            />
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="right|bottom">-->
+<!--            <Button-->
+<!--                android:id="@+id/exercise_btn"-->
+<!--                android:layout_width="200dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:text="운동하기"-->
+<!--                android:textColor="#fff"-->
+<!--                android:backgroundTint="@color/GREEN_1"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="30sp"-->
+<!--                android:letterSpacing="-0.기01"-->
+<!--                android:background="@drawable/radius"/>-->
+<!--        </LinearLayout>-->
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/clientResultRecyclerView"
+        android:padding="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- START BOTTOM BUTTON -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="28dp"
+        android:paddingHorizontal="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/delete_btn"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="88dp"
+            android:text="삭제"
+            android:textColor="#fff"
+            android:backgroundTint="@color/c6c6c6"
+            android:fontFamily="@font/pretendard_bold"
+            android:textStyle="bold"
+            android:textSize="32sp"
+            android:layout_marginRight="32dp"
+            android:letterSpacing="-0.01"
+            android:background="@drawable/radius"/>
+
+        <Button
+            android:id="@+id/result_btn"
+            android:layout_width="0dp"
+            android:layout_height="88dp"
+            android:layout_weight="1"
+            android:text="최종 결과 산출"
+            android:textColor="#fff"
+            android:backgroundTint="@color/GREEN_1"
+            android:fontFamily="@font/pretendard_bold"
+            android:letterSpacing="-0.01"
+            android:textStyle="bold"
+            android:textSize="32sp"
+            android:background="@drawable/radius"/>
+    </LinearLayout>
+    <!-- END BOTTOM BUTTON -->
+
+</LinearLayout>

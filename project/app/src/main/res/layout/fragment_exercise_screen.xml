@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F8F7"
+    tools:context=".views.fragments.tutorial.ExerciseScreenFragment">
+
+   <TextView
+       android:id="@+id/tv_es_header"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="64dp"
+       android:layout_marginHorizontal="71dp"
+       android:text="{}"
+       android:textSize="43sp"
+       android:letterSpacing="-0.01"
+       android:textColor="#1C1C1C"
+       android:fontFamily="@font/font_family"
+       android:textFontWeight="700"
+       />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="26dp"
+        >
+
+    <!-- 검사 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/radius"
+        android:backgroundTint="#F3F8F7"
+        android:layout_marginHorizontal="45dp"
+        >
+        <!-- 대교뉴이프 검사 -->
+        <LinearLayout
+            android:id="@+id/company_daekyo_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            >
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/img_daekyo_logo" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="37dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="신체기능검사"
+                    android:textSize="34sp"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:letterSpacing="-0.01"
+                    android:fontFamily="@font/font_family"
+                    />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+        <!-- SPPB 검사 -->
+        <LinearLayout
+            android:id="@+id/exercise_sppb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            >
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_exercise_sppb" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="37dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SPPB 검사"
+                    android:textSize="34sp"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:letterSpacing="-0.01"
+                    android:fontFamily="@font/font_family"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Short Physical Performance Battery (SPPB)"
+                    android:textSize="26sp"
+                    android:textColor="#B8CCCC"
+                    android:letterSpacing="-0.01"
+                    android:fontFamily="@font/font_family"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+        <!-- 체력측정검사 -->
+        <LinearLayout
+            android:id="@+id/exercise_sft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            >
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_exercise_sft" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="37dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="체력측정검사"
+                    android:textSize="34sp"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:letterSpacing="-0.01"
+                    android:fontFamily="@font/font_family"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Senior Fitness Test(SFT)"
+                    android:textSize="26sp"
+                    android:textColor="#B8CCCC"
+                    android:letterSpacing="-0.01"
+                    android:fontFamily="@font/font_family"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+        <!-- 기능적 검사 -->
+        <LinearLayout
+            android:id="@+id/exercise_ft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            >
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_exercise_functionaltest" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="37dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="기능적 검사"
+                    android:textSize="34sp"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:letterSpacing="-0.01"
+                    android:fontFamily="@font/font_family"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Functional Test"
+                    android:textSize="26sp"
+                    android:textColor="#B8CCCC"
+                    android:letterSpacing="-0.01"
+                    android:fontFamily="@font/font_family"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+        <!-- 기능적 검사 -->
+        <LinearLayout
+            android:id="@+id/exercise_100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            >
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_exercise_100" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="37dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="국민체력 100"
+                    android:textSize="34sp"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:letterSpacing="-0.01"
+                    android:fontFamily="@font/font_family"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="National Fitness Awardnational Fitness Award"
+                    android:textSize="26sp"
+                    android:textColor="#B8CCCC"
+                    android:letterSpacing="-0.01"
+                    android:fontFamily="@font/font_family"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

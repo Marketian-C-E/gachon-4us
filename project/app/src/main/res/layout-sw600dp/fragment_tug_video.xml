@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#FFF"
+        android:textSize="43sp"
+        android:letterSpacing="-0.01"
+        android:textFontWeight="700"
+        android:fontFamily="@font/font_family"
+        android:gravity="center_horizontal|top"
+        android:paddingHorizontal="36dp" />
+
+    <LinearLayout
+        android:layout_width="600dp"
+        android:layout_height="800dp"
+        android:layout_gravity="center_horizontal|center"
+        android:background="@drawable/radius"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <!-- 상단 헤더 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="검사 튜토리얼 "
+                android:textColor="#1C1C1C"
+                android:textSize="43sp"
+                android:letterSpacing="-0.01"
+                android:textFontWeight="700"
+                android:fontFamily="@font/font_family"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TIP"
+                android:textColor="#00A99F"
+                android:textSize="43sp"
+                android:letterSpacing="-0.01"
+                android:textFontWeight="700"
+                android:fontFamily="@font/font_family"/>
+        </LinearLayout>
+        <SurfaceView
+            android:id="@+id/explanation_video"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_marginTop="10dp"
+            android:minHeight="200dp"
+            android:visibility="visible" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/leg_test_start_btn"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="34dp"
+        android:layout_marginHorizontal="50dp"
+        android:background="@drawable/radius"
+        android:backgroundTint="@color/GREEN_1"
+        android:text="검사 시작"
+        android:fontFamily="@font/font_family"
+        android:textAppearance="@style/text_size_28_FFF"/>
+</FrameLayout>

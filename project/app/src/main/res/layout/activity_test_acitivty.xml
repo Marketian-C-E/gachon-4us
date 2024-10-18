@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".views.TestAcitivty">
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/seekBarValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0" />
+    <Button
+        android:id="@+id/playSound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사운드 송출" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:layout_gravity="top|end">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/hr_board"
+                android:layout_width="164dp"
+                android:layout_height="515dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_hr_board_empty"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/pretendard_bold"
+                android:layout_marginTop="20dp"
+                android:letterSpacing="-0.01"
+                android:text="심박수"
+                android:textColor="#222222"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@+id/hr_board"
+                app:layout_constraintStart_toStartOf="@+id/hr_board"
+                app:layout_constraintTop_toTopOf="@+id/hr_board" />
+
+            <TextView
+                android:id="@+id/hr_board_text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:letterSpacing="-0.01"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#222222"
+                android:textSize="59sp"
+                app:layout_constraintBottom_toBottomOf="@+id/hr_board"
+                app:layout_constraintEnd_toEndOf="@+id/hr_board"
+                app:layout_constraintStart_toStartOf="@+id/hr_board"
+                app:layout_constraintTop_toTopOf="@+id/hr_board"
+                app:layout_constraintVertical_bias="0.12" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/gradient_progressbar"
+                android:rotation="270"
+                app:layout_constraintBottom_toBottomOf="@+id/hr_board"
+                app:layout_constraintEnd_toEndOf="@+id/hr_board"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/hr_board"
+                app:layout_constraintTop_toTopOf="@+id/hr_board"
+                app:layout_constraintVertical_bias="0.53" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</LinearLayout>

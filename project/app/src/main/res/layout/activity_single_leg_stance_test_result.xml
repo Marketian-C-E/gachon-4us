@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F3F8F7"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="45dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="43sp"
+                android:textColor="#2C2C2C"
+                android:letterSpacing="-0.01"
+                android:layout_marginTop="35dp"
+                android:text="회원님의 결과입니다."
+                android:fontFamily="@font/font_family"/>
+
+            <!-- 검사 결과 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:textSize="38sp"
+                android:letterSpacing="-0.01"
+                android:textColor="#252525"
+                android:textFontWeight="700"
+                android:fontFamily="@font/font_family"
+                android:textAlignment="center"
+                android:text="검사결과" />
+
+            <LinearLayout
+                android:layout_marginTop="21dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="68dp"
+                android:paddingVertical="50dp"
+                android:background="@color/white"
+                android:gravity="center"
+                >
+                <TextView
+                    android:id="@+id/seconds_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:textColor="#666666"
+                    android:lineSpacingExtra="4sp"
+                    android:layout_marginBottom="24dp"
+                    android:text="0초"/>
+
+                <TextView
+                    android:id="@+id/grade_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="42dp"
+                    android:background="@drawable/radius"
+                    android:backgroundTint="@color/light_blue_400"
+                    android:textStyle="normal"
+                    android:textSize="45sp"
+                    android:textColor="#ffffff"
+                    android:lineSpacingExtra="-11sp"
+                    android:gravity="center_horizontal"
+                    android:text="Failed"/>
+
+<!--                <TableLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="21dp">-->
+<!--                    <TableRow-->
+<!--                        android:minHeight="80dp"-->
+<!--                        android:background="@drawable/radius"-->
+<!--                        android:backgroundTint="#DEF1ED"-->
+<!--                        android:gravity="center"-->
+<!--                        >-->
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:textSize="26sp"-->
+<!--                            android:textFontWeight="700"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:text="시간"-->
+<!--                            android:textColor="#8FBCB3"-->
+<!--                            android:fontFamily="@font/font_family"-->
+<!--                            />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:textSize="26sp"-->
+<!--                            android:textFontWeight="700"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:text="등급"-->
+<!--                            android:textColor="#8FBCB3"-->
+<!--                            android:fontFamily="@font/font_family" />-->
+<!--                    </TableRow>-->
+
+<!--                    <TableRow-->
+<!--                        android:minHeight="80dp"-->
+<!--                        android:background="@drawable/radius"-->
+<!--                        android:backgroundTint="#FFF"-->
+<!--                        >-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:gravity="center"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/seconds_view"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:textFontWeight="700"-->
+<!--                                android:fontFamily="@font/font_family"-->
+<!--                                android:letterSpacing="-0.01"-->
+<!--                                android:text="00"-->
+<!--                                android:textColor="#474747"-->
+<!--                                android:textSize="26sp" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:textFontWeight="700"-->
+<!--                                android:fontFamily="@font/font_family"-->
+<!--                                android:letterSpacing="-0.01"-->
+<!--                                android:text="초"-->
+<!--                                android:textColor="#474747"-->
+<!--                                android:textSize="26sp" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/grade_view"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:textFontWeight="700"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:text="1"-->
+<!--                            android:textColor="#474747"-->
+<!--                            android:letterSpacing="-0.01"-->
+<!--                            android:fontFamily="@font/font_family"-->
+<!--                            android:textSize="26sp" />-->
+<!--                    </TableRow>-->
+<!--                </TableLayout>-->
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="63dp"
+                android:background="#C4DAD5"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="38sp"
+                android:letterSpacing="-0.01"
+                android:textColor="#252525"
+                android:textFontWeight="700"
+                android:fontFamily="@font/font_family"
+                android:textAlignment="center"
+                android:text="관절 변화" />
+
+            <TableLayout
+                android:layout_marginTop="21dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="52dp"
+                android:background="@color/white">
+                <TableRow
+                    android:paddingLeft="42dp"
+                    android:paddingTop="36dp"
+                    >
+
+                    <TextView
+                        android:drawableLeft="@drawable/circle_blue"
+                        android:drawablePadding="7dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="24sp"
+                        android:textColor="#666666"
+                        android:letterSpacing="-0.01"
+                        android:lineSpacingExtra="-4sp"
+                        android:text="정상 가동 범위" />
+                </TableRow>
+
+                <TableRow
+                    android:paddingHorizontal="79dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginRight="75dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/asset_target" />
+                            <com.github.mikephil.charting.charts.ScatterChart
+                                android:id="@+id/leftShoulderChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:layout_weight="1" />
+                        </FrameLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="28sp"
+                            android:textColor="#666666"
+                            android:letterSpacing="-0.01"
+                            android:lineSpacingExtra="0sp"
+                            android:layout_gravity="center"
+                            android:text="어깨 좌측"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/asset_target" />
+                            <com.github.mikephil.charting.charts.ScatterChart
+                                android:id="@+id/rightShoulderChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:layout_weight="1" />
+                        </FrameLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="28sp"
+                            android:textColor="#666666"
+                            android:letterSpacing="-0.01"
+                            android:lineSpacingExtra="0sp"
+                            android:layout_gravity="center"
+                            android:text="어깨 우측"/>
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:paddingHorizontal="79dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginRight="75dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/asset_target" />
+                            <com.github.mikephil.charting.charts.ScatterChart
+                                android:id="@+id/leftHipChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:layout_weight="1" />
+                        </FrameLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="28sp"
+                            android:textColor="#666666"
+                            android:letterSpacing="-0.01"
+                            android:lineSpacingExtra="0sp"
+                            android:layout_gravity="center"
+                            android:text="골반 좌측"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/asset_target" />
+                            <com.github.mikephil.charting.charts.ScatterChart
+                                android:id="@+id/rightHipChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:layout_weight="1" />
+                        </FrameLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="28sp"
+                            android:textColor="#666666"
+                            android:letterSpacing="-0.01"
+                            android:lineSpacingExtra="0sp"
+                            android:layout_gravity="center"
+                            android:text="골반 우측"/>
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:paddingHorizontal="79dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="75dp"
+                        android:layout_weight="1">
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/asset_target" />
+                            <com.github.mikephil.charting.charts.ScatterChart
+                                android:id="@+id/leftKneeChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:layout_weight="1" />
+                        </FrameLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="28sp"
+                            android:textColor="#666666"
+                            android:letterSpacing="-0.01"
+                            android:lineSpacingExtra="0sp"
+                            android:layout_gravity="center"
+                            android:text="무릎 좌측"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/asset_target" />
+                            <com.github.mikephil.charting.charts.ScatterChart
+                                android:id="@+id/rightKneeChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:layout_weight="1" />
+                        </FrameLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="28sp"
+                            android:textColor="#666666"
+                            android:letterSpacing="-0.01"
+                            android:lineSpacingExtra="0sp"
+                            android:layout_gravity="center"
+                            android:text="무릎 우측"/>
+                    </LinearLayout>
+                </TableRow>
+
+            </TableLayout>
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="28sp"-->
+<!--                android:letterSpacing="-0.01"-->
+<!--                android:textColor="#252525"-->
+<!--                android:textFontWeight="700"-->
+<!--                android:fontFamily="@font/font_family"-->
+<!--                android:layout_marginLeft="45dp"-->
+<!--                android:text="관절 변화" />-->
+
+<!--            <TableLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <TableRow-->
+<!--                    android:layout_marginTop="30dp"-->
+<!--                    android:layout_marginBottom="30dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1">-->
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:text="어깨 좌측"/>-->
+<!--                        <com.github.mikephil.charting.charts.ScatterChart-->
+<!--                            android:id="@+id/leftShoulderChart"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="300dp"-->
+<!--                            android:layout_weight="1" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1">-->
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:text="어깨 우측"/>-->
+<!--                        <com.github.mikephil.charting.charts.ScatterChart-->
+<!--                            android:id="@+id/rightShoulderChart"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="300dp"-->
+<!--                            android:layout_weight="1" />-->
+<!--                    </LinearLayout>-->
+<!--                </TableRow>-->
+
+<!--                <TableRow-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginBottom="30dp"-->
+<!--                    android:layout_weight="1">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1">-->
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:text="골반 좌측"/>-->
+<!--                        <com.github.mikephil.charting.charts.ScatterChart-->
+<!--                            android:id="@+id/leftHipChart"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="300dp"-->
+<!--                            android:layout_weight="1" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1">-->
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:text="골반 우측"/>-->
+<!--                        <com.github.mikephil.charting.charts.ScatterChart-->
+<!--                            android:id="@+id/rightHipChart"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="300dp"-->
+<!--                            android:layout_weight="1" />-->
+<!--                    </LinearLayout>-->
+<!--                </TableRow>-->
+
+<!--                <TableRow-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1">-->
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:text="무릎 좌측"/>-->
+<!--                        <com.github.mikephil.charting.charts.ScatterChart-->
+<!--                            android:id="@+id/leftKneeChart"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="300dp"-->
+<!--                            android:layout_weight="1" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1">-->
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:text="무릎 우측"/>-->
+<!--                        <com.github.mikephil.charting.charts.ScatterChart-->
+<!--                            android:id="@+id/rightKneeChart"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="300dp"-->
+<!--                            android:layout_weight="1" />-->
+<!--                    </LinearLayout>-->
+<!--                </TableRow>-->
+
+<!--            </TableLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="35dp"
+            android:gravity="bottom|center"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/home_btn"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:text="홈"
+                android:textColor="#fff"
+                android:backgroundTint="#9A9A9A"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/radius"/>
+        </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

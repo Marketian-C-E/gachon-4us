@@ -1,0 +1,42 @@
+<!-- fragment_create_post.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="게시글 제목"
+        android:background="@drawable/edittext_background"
+        android:padding="8dp"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextContent"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/editTextTitle"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="top|start"
+        android:padding="8dp"
+        android:background="@drawable/edittext_background"
+        android:hint="게시글 내용" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSavePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_check"
+        android:backgroundTint="@color/n_blue"
+        app:tint="@color/white"
+        android:contentDescription="게시글을 저장합니다." />
+
+</RelativeLayout>

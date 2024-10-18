@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <!-- TODO: Update blank fragment layout -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.rom.RomResultFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="70dp"
+    android:layout_marginVertical="100dp"
+    android:padding="40dp"
+    android:orientation="vertical"
+    android:backgroundTint="@color/f3f8f7"
+    android:background="@drawable/radius1">
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/pretendard_bold"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:letterSpacing="-0.01"
+        android:lineSpacingExtra="-9sp"
+        android:layout_marginBottom="20dp"
+        android:text="운동 항목 검사 결과" />
+
+    <!-- 각도 뷰 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/result_image" />
+
+    </LinearLayout>
+    <!-- END 각도 뷰 -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:id="@+id/result_text"
+        android:fontFamily="@font/pretendard_bold"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:letterSpacing="-0.01"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <Button
+            android:id="@+id/btn_restart"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="@color/GREEN_1"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:letterSpacing="-0.01"
+            android:lineSpacingExtra="-18sp"
+            android:fontFamily="@font/pretendard_bold"
+            android:text="재측정" />
+
+        <Button
+            android:id="@+id/btn_finish"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@drawable/radius1"
+            android:backgroundTint="@color/n_red"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:letterSpacing="-0.01"
+            android:lineSpacingExtra="-18sp"
+            android:fontFamily="@font/pretendard_bold"
+            android:text="종료" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressCircleView">
+        <attr name="filled" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="PhysicalStatusView">
+        <attr name="level" format="integer" />
+        <attr name="android:text" />
+        <attr name="android:textSize" />
+    </declare-styleable>
+    <declare-styleable name="CustomCheckboxItem">
+        <attr name="text1_label" format="string" />
+        <attr name="text2_label" format="string" />
+    </declare-styleable>
+    <declare-styleable name="AgreeCheckboxItem">
+        <attr name="text" format="string" />
+    </declare-styleable>
+</resources>

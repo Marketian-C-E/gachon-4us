@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f3f8f7"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="45dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- START HEADER 정도 -->
+            <LinearLayout
+                android:paddingHorizontal="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="43sp"
+                    android:textColor="@color/black"
+                    android:letterSpacing="-0.01"
+                    android:lineSpacingExtra="-9sp"
+                    android:layout_marginTop="35dp"
+                    android:text="측정이 종료되었습니다."
+                    android:fontFamily="@font/pretendard_bold"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/test_result_header_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="43sp"
+                        android:textColor="@color/black"
+                        android:letterSpacing="-0.01"
+                        android:text="{}"
+                        android:fontFamily="@font/pretendard_regular"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="43sp"
+                        android:textColor="#999999"
+                        android:letterSpacing="-0.01"
+                        android:text="님의 결과입니다."
+                        android:fontFamily="@font/pretendard_regular"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- END HEADER 정도 -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="63dp"
+                android:background="@color/c4dad5" />
+
+            <!-- START 검사 결과 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/measurement_item_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="38sp"
+                    android:textColor="#252525"
+                    android:letterSpacing="-0.01"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="{}" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="38sp"
+                    android:textColor="#999999"
+                    android:letterSpacing="-0.01"
+                    android:fontFamily="@font/pretendard_regular"
+                    android:text=" 검사결과" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="21dp"
+                android:paddingBottom="40dp"
+                android:paddingTop="30dp"
+                android:background="@color/white"
+                >
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/result_panel_pnp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="68dp"
+                    android:paddingVertical="50dp"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:id="@+id/pnp_seconds_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="30sp"
+                        android:textColor="#666666"
+                        android:lineSpacingExtra="4sp"
+                        android:layout_marginBottom="24dp"
+                        android:text="0초"/>
+
+                    <TextView
+                        android:id="@+id/pnp_grade_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="42dp"
+                        android:background="@drawable/radius"
+                        android:backgroundTint="@color/light_blue_400"
+                        android:textStyle="normal"
+                        android:textSize="45sp"
+                        android:textColor="#ffffff"
+                        android:lineSpacingExtra="-11sp"
+                        android:gravity="center_horizontal"
+                        android:text="Failed"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/result_panel_count_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="50dp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/count_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="70sp"
+                            android:textColor="#00b0a6"
+                            android:letterSpacing="-0.05"
+                            android:text="10" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="1dp"
+                        android:layout_height="223dp"
+                        android:background="#dadada">
+                    </View>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="40dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/grade_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="등급 (N등급)"
+                                android:layout_marginBottom="30dp"
+                                android:textColor="#666666"
+                                android:textSize="42sp"
+                                android:textStyle="bold" />
+
+                            <co.kr.myfitnote.core.ui.GradeView
+                                android:id="@+id/grade_ui_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="84dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- END 검사 결과 -->
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- START BOTTOM BUTTON -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="35dp"
+        android:paddingHorizontal="50dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/home_btn"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:text="메뉴로 이동"
+            android:textColor="#fff"
+            android:backgroundTint="@color/GREEN_1"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:background="@drawable/radius"/>
+    </LinearLayout>
+    <!-- END BOTTOM BUTTON -->
+
+</LinearLayout>

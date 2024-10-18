@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".cm.ui.home.HomeFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="36dp"
+                    android:paddingHorizontal="55dp">
+                    <ImageView
+                        android:id="@+id/company_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        app:srcCompat="@drawable/logo_verctor" />
+                </LinearLayout>
+
+                <!-- 본문 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layout_border_radius"
+                    android:backgroundTint="@color/f3f8f7"
+                    android:padding="44dp"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!-- 이용자 현황 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/d5f0eb"
+                            android:background="@drawable/layout_border_30dp"
+                            android:orientation="vertical">
+
+                            <!-- 누적 이용자 수 -->
+                            <LinearLayout
+                                android:layout_marginTop="19dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingHorizontal="59dp"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="200dp"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/pretendard_regular"
+                                    android:textStyle="bold"
+                                    android:textSize="23sp"
+                                    android:textColor="#505050"
+                                    android:letterSpacing="-0.01"
+                                    android:gravity="center_vertical"
+                                    android:text="누적 이용자 수" />
+
+                                <TextView
+                                    android:id="@+id/total_client_tv"
+                                    android:layout_width="255dp"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/pretendard_bold"
+                                    android:textStyle="bold"
+                                    android:textSize="62sp"
+                                    android:textColor="#505050"
+                                    android:letterSpacing="-0.01"
+                                    android:gravity="right"
+                                    android:text="120,000" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_marginHorizontal="59dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#80505050">
+                            </View>
+
+
+                            <!-- 신규 이용자 수 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingHorizontal="59dp"
+                                android:orientation="horizontal">
+                                <LinearLayout
+                                    android:layout_width="200dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pretendard_regular"
+                                        android:textStyle="bold"
+                                        android:textSize="23sp"
+                                        android:textColor="#505050"
+                                        android:letterSpacing="-0.01"
+                                        android:text="신규 이용자 수" />
+
+                                    <TextView
+                                        android:id="@+id/date_tv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pretendard_regular"
+                                        android:textStyle="bold"
+                                        android:textSize="20sp"
+                                        android:textColor="#8f505050"
+                                        android:letterSpacing="-0.01"
+                                        android:text="금일 기준" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/new_client_tv"
+                                    android:layout_width="255dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="19dp"
+                                    android:fontFamily="@font/pretendard_bold"
+                                    android:gravity="right"
+                                    android:letterSpacing="-0.01"
+                                    android:text="0"
+                                    android:textColor="#505050"
+                                    android:textSize="62sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/layout_border_bottom_30dp"
+                                android:backgroundTint="@color/GREEN_1"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="20dp"
+                                android:paddingHorizontal="50dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:id="@+id/date2_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/pretendard_regular"
+                                        android:letterSpacing="-0.02"
+                                        android:text="{}"
+                                        android:textColor="@color/f3f8f7"
+                                        android:textSize="25sp" />
+                                    <TextView
+                                        android:id="@+id/tv_home_header"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/pretendard_bold"
+                                        android:letterSpacing="-0.03"
+                                        android:text="{}님의 이용자 정보입니다."
+                                        android:textColor="@color/white"
+                                        android:textSize="35sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="160dp"
+                            android:layout_gravity="bottom|right"
+                            >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/ic_guider" />
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+
+                    <!-- 간편 메뉴 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="46dp"
+                        android:layout_marginBottom="32dp"
+                        android:textColor="#3d3d3d"
+                        android:text="@string/label_quick_menu"
+                        android:fontFamily="@font/pretendard_bold"
+                        android:textSize="32sp"/>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_marginBottom="22dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <!-- 기존 이용자 검색 -->
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <LinearLayout
+                                android:id="@+id/btn_client_search"
+                                android:paddingLeft="30dp"
+                                android:paddingVertical="30dp"
+                                android:paddingRight="20dp"
+                                android:layout_marginRight="26dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="161dp"
+                                android:background="@drawable/layout_border_20dp"
+                                android:backgroundTint="@color/GREEN_1"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pretendard_regular"
+                                        android:letterSpacing="-0.02"
+                                        android:text="이미 등록된 이용자예요."
+                                        android:textColor="@color/f3f8f7"
+                                        android:textSize="25sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/pretendard_bold"
+                                        android:letterSpacing="-0.03"
+                                        android:text="@string/label_search_client"
+                                        android:textColor="@color/white"
+                                        android:textSize="30sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                                <ImageView
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_gravity="bottom|right"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="72dp"
+                                    app:srcCompat="@drawable/ic_home_1" />
+
+                            </FrameLayout>
+
+                            <!-- 신규 이용자 등록 -->
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <LinearLayout
+                                    android:id="@+id/btn_client_create"
+                                    android:paddingLeft="30dp"
+                                    android:paddingVertical="30dp"
+                                    android:paddingRight="20dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="161dp"
+                                    android:background="@drawable/layout_border_20dp"
+                                    android:backgroundTint="@color/white"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_weight="1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical" >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/pretendard_regular"
+                                            android:letterSpacing="-0.02"
+                                            android:text="새로 등록하는 이용자예요."
+                                            android:textColor="#eb767676"
+                                            android:textSize="22sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/pretendard_bold"
+                                            android:letterSpacing="-0.03"
+                                            android:text="@string/label_create_client"
+                                            android:textColor="@color/GREEN_1"
+                                            android:textSize="30sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_gravity="bottom|right"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="72dp"
+                                    app:srcCompat="@drawable/ic_home_2" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <!-- 기존 이용자 검색 -->
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <LinearLayout
+                                    android:id="@+id/btn_experience_btn"
+                                    android:paddingLeft="30dp"
+                                    android:paddingVertical="30dp"
+                                    android:paddingRight="20dp"
+                                    android:layout_marginRight="26dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="161dp"
+                                    android:background="@drawable/layout_border_20dp"
+                                    android:backgroundTint="@color/white"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_weight="1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical" >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/pretendard_regular"
+                                            android:letterSpacing="-0.02"
+                                            android:text="등록 없이 바로 체험해요."
+                                            android:textColor="#eb767676"
+                                            android:textSize="25sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/pretendard_bold"
+                                            android:letterSpacing="-0.03"
+                                            android:text="@string/label_direct_measurement"
+                                            android:textColor="@color/GREEN_1"
+                                            android:textSize="30sp" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_gravity="bottom|right"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="72dp"
+                                    app:srcCompat="@drawable/ic_home_3" />
+                            </FrameLayout>
+
+                            <!-- 신규 이용자 등록 -->
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <LinearLayout
+                                    android:id="@+id/btn_client_result"
+                                    android:paddingLeft="30dp"
+                                    android:paddingVertical="30dp"
+                                    android:paddingRight="20dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1"
+                                    android:layout_height="161dp"
+                                    android:background="@drawable/layout_border_20dp"
+                                    android:backgroundTint="@color/white"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_weight="1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical" >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/pretendard_regular"
+                                            android:letterSpacing="-0.02"
+                                            android:text="이용자 결과를 보여줘요."
+                                            android:textColor="#eb767676"
+                                            android:textSize="25sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/pretendard_bold"
+                                            android:letterSpacing="-0.03"
+                                            android:text="@string/label_result_of_program"
+                                            android:textColor="@color/GREEN_1"
+                                            android:textSize="30sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                                <ImageView
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_gravity="bottom|right"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="72dp"
+                                    app:srcCompat="@drawable/ic_home_4" />
+                            </FrameLayout>
+
+                        </TableRow>
+
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+</FrameLayout>

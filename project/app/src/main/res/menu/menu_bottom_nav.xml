@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_home_btn"
+        android:icon="@drawable/ic_home"
+        android:title="교육 품앗이"
+        app:itemIconTint="@color/bottom_navigation_icon_colors"/>
+    <item
+        android:id="@+id/information_btn"
+        android:icon="@drawable/ic_my"
+        android:title="정보 품앗이"
+        app:itemIconTint="@color/bottom_navigation_icon_colors"/>
+    <item
+        android:id="@+id/communication_btn"
+        android:icon="@drawable/ic_communication"
+        android:title="소통 품앗이"
+        app:itemIconTint="@color/bottom_navigation_icon_colors"/>
+    <item
+        android:id="@+id/companylink_btn"
+        android:icon="@drawable/ic_link"
+        android:title="바로가기"
+        app:itemIconTint="@color/bottom_navigation_icon_colors"/>
+</menu>

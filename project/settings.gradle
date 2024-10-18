@@ -1,0 +1,2 @@
+rootProject.name = "wchangup"
+include ':app'

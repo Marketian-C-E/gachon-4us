@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <!-- 상단 헤더 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginHorizontal="42dp">
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/cm_register_header"
+                                android:letterSpacing="-0.01"
+                                android:textColor="#1C1C1C"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/pretendard_bold"
+                                />
+
+                        </LinearLayout>
+                        <!-- 입력창 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginHorizontal="25dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_marginBottom="17dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="17dp"
+                                    android:textSize="18sp"
+                                    android:textColor="#9DABAA"
+                                    android:fontFamily="@font/pretendard_bold"
+                                    android:letterSpacing="-0.1"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="이름"
+                                    />
+
+                                <EditText
+                                    android:id="@+id/name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/rectangle_1"
+                                    android:hint="이름을 입력해 주세요."
+                                    android:inputType="textPersonName"
+                                    android:paddingLeft="17dp"
+                                    android:textColorHint="#B9CAC9"
+
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_marginBottom="17dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="17dp"
+                                    android:textSize="18sp"
+                                    android:textColor="#9DABAA"
+                                    android:fontFamily="@font/pretendard_bold"
+                                    android:letterSpacing="-0.1"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="생년월일"
+                                    />
+
+                                <EditText
+                                    android:id="@+id/birth_date"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/rectangle_1"
+                                    android:hint="19950623"
+                                    android:inputType="date"
+                                    android:paddingLeft="17dp"
+                                    android:textColorHint="#B9CAC9"
+
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_marginBottom="17dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="17dp"
+                                    android:textSize="18sp"
+                                    android:textColor="#9DABAA"
+                                    android:fontFamily="@font/pretendard_bold"
+                                    android:letterSpacing="-0.1"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="핸드폰 번호"
+                                    />
+
+                                <EditText
+                                    android:id="@+id/phone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/rectangle_1"
+                                    android:hint="-를 제외한 연락처 입력해 주세요"
+                                    android:inputType="number"
+                                    android:paddingLeft="17dp"
+                                    android:textColorHint="#B9CAC9"
+
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_marginBottom="17dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="17dp"
+                                    android:textSize="18sp"
+                                    android:textColor="#9DABAA"
+                                    android:fontFamily="@font/pretendard_bold"
+                                    android:letterSpacing="-0.1"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="성별"
+                                    />
+
+                                <RadioGroup
+                                    android:id="@+id/sex_type"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/man"
+                                        android:layout_weight="1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="18sp"
+                                        android:textColor="#B9CAC9"
+                                        android:letterSpacing="-0.1"
+                                        android:text="남성" />
+
+                                    <RadioButton
+                                        android:id="@+id/woman"
+                                        android:layout_weight="1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="18sp"
+                                        android:textColor="#B9CAC9"
+                                        android:letterSpacing="-0.1"
+                                        android:text="여성" />
+                                </RadioGroup>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_marginBottom="17dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="17dp"
+                                    android:textSize="18sp"
+                                    android:textColor="#9DABAA"
+                                    android:fontFamily="@font/pretendard_bold"
+                                    android:letterSpacing="-0.1"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="신장"
+                                    />
+                                <EditText
+                                    android:id="@+id/height"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:paddingLeft="17dp"
+                                    android:background="@drawable/rectangle_1"
+                                    android:hint="165"
+                                    android:textColorHint="#B9CAC9"
+
+                                    android:inputType="number"
+                                    android:textSize="18sp"
+                                     />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_marginBottom="17dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="17dp"
+                                    android:textSize="18sp"
+                                    android:textColor="#9DABAA"
+                                    android:fontFamily="@font/pretendard_bold"
+                                    android:letterSpacing="-0.1"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="체중"
+                                    />
+                                <EditText
+                                    android:id="@+id/weight"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:paddingLeft="17dp"
+                                    android:background="@drawable/rectangle_1"
+                                    android:hint="55"
+                                    android:textColorHint="#B9CAC9"
+
+                                    android:inputType="number"
+                                    android:textSize="18sp"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_marginBottom="17dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="17dp"
+                                    android:textSize="18sp"
+                                    android:textColor="#9DABAA"
+                                    android:fontFamily="@font/pretendard_bold"
+                                    android:letterSpacing="-0.1"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="주소"
+                                    />
+                                <EditText
+                                    android:id="@+id/address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:paddingLeft="17dp"
+                                    android:background="@drawable/rectangle_1"
+                                    android:hint="주소를 입력해 주세요."
+                                    android:textColorHint="#B9CAC9"
+
+                                    android:inputType="text"
+                                    android:textSize="18sp"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_marginBottom="17dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="22sp"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/pretendard_bold"
+                                    android:letterSpacing="-0.1"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="질환 여부 문항"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="17dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:textSize="18sp"
+                                    android:fontFamily="@font/pretendard_bold"
+                                    android:letterSpacing="-0.1"
+                                    android:text="@string/cm_register_question_1"
+                                    />
+                                <RadioGroup
+                                    android:id="@+id/disease_type"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+
+                                </RadioGroup>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_marginBottom="8dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="22sp"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/pretendard_bold"
+                                    android:letterSpacing="-0.1"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="약관 동의"
+                                    />
+
+                                <co.kr.myfitnote.core.ui.AgreeCheckboxView
+                                    android:id="@+id/agree_policy"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="17dp"
+                                    app:text="이용약관에 동의합니다."
+                                    />
+                                <co.kr.myfitnote.core.ui.AgreeCheckboxView
+                                    android:id="@+id/agree_privacy"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="17dp"
+                                    android:layout_marginBottom="20dp"
+                                    app:text="개인정보 처리방침에 동의합니다."
+                                    />
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/enroll_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/radius"
+                                android:backgroundTint="@color/GREEN_1"
+                                android:layout_marginTop="2dp"
+                                android:lineSpacingExtra="14sp"
+                                android:text="@string/cm_register_button_label"
+                                android:fontFamily="@font/pretendard_bold"
+                                android:textSize="20sp"
+                                android:textColor="#ffffff" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</layout>

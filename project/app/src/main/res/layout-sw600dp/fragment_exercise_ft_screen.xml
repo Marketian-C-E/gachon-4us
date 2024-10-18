@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F8F7"
+    tools:context=".views.fragments.tutorial.ExerciseFtScreenFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="71dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/font_family"
+        android:letterSpacing="-0.01"
+        android:text="회원님의 기능적 검사를\n시작합니다."
+        android:textColor="#1C1C1C"
+        android:textFontWeight="700"
+        android:textSize="43sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!-- 검사 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="45dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/radius"
+        android:backgroundTint="#F3F8F7"
+        android:orientation="vertical">
+        <!-- 다중 분절 굴곡 검사 -->
+        <LinearLayout
+            android:id="@+id/exercise_multi_segmental_flexion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="다중 분절 굴곡"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="Multi-Segmental Flexion"
+                    android:textColor="#B8CCCC"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+        <!-- 다중 분절 신전 검사 -->
+        <LinearLayout
+            android:id="@+id/exercise_multi_segmental_extension"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="다중 분절 신전"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="Multi-Segmental Extension"
+                    android:textColor="#B8CCCC"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+        <!-- 다중 분절 회전 검사 -->
+        <LinearLayout
+            android:id="@+id/exercise_multi_segmental_rotation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="다중 분절 회전"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="Multi-Segmental Rotation"
+                    android:textColor="#B8CCCC"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+        <!-- 외 발서기 검사 -->
+        <LinearLayout
+            android:id="@+id/exercise_single_leg_stance_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="외 발 서기 (일반용)"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="Single Leg Stance"
+                    android:textColor="#B8CCCC"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+        <!-- 외 발서기 (장애인) 검사 -->
+        <LinearLayout
+            android:id="@+id/exercise_single_leg_stance_test_for_disabled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="외 발 서기 (환자용)"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="Single Leg Stance"
+                    android:textColor="#B8CCCC"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+
+        <!-- 오버헤드 스쿼트 검사 -->
+        <LinearLayout
+            android:id="@+id/exercise_overhead_squat_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="오버헤드 스쿼트"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="Overhead Squat"
+                    android:textColor="#B8CCCC"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F8F7"
+    tools:context=".views.fragments.tutorial.Exercise100ScreenFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="71dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/font_family"
+        android:letterSpacing="-0.01"
+        android:text="회원님의 국민체력100 검사를\n시작합니다."
+        android:textColor="#1C1C1C"
+        android:textFontWeight="700"
+        android:textSize="43sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!-- 검사 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="45dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/radius"
+        android:backgroundTint="#F3F8F7"
+        android:orientation="vertical">
+        <!-- 악력 검사 -->
+        <LinearLayout
+            android:id="@+id/exercise_grip_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="악력"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="Grip Test"
+                    android:textColor="#B8CCCC"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+        <!-- 의자에 앉았다 일어서기 검사 -->
+        <LinearLayout
+            android:id="@+id/exercise_chair_stand_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="의자에 앉았다 일어서기"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="Chair Stand Test"
+                    android:textColor="#B8CCCC"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+        <!-- 2분 제자리 걷기 검사 -->
+        <LinearLayout
+            android:id="@+id/exercise_2min_step_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="2분 제자리 걷기"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="2-Minute Step Test"
+                    android:textColor="#B8CCCC"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+        <!-- 2분 제자리 걷기 환자용 검사 -->
+        <LinearLayout
+            android:id="@+id/exercise_2min_step_disabled_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="2분 제자리 걷기(환자용)"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="2-Minute Step Test"
+                    android:textColor="#B8CCCC"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+        <!-- 앉아 윗몸 앞으로 굽히기 -->
+        <LinearLayout
+            android:id="@+id/exercise_sit_and_reach_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="앉아 윗몸 앞으로 굽히기"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="Sit-and-Reach Test"
+                    android:textColor="#B8CCCC"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+        <!-- 의자 앉아 3m 표적 돌아오기 -->
+        <LinearLayout
+            android:id="@+id/exercise_timedup_and_go_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="의자 앉아 3m 표적 돌아오기"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="Timed Up and Go Test"
+                    android:textColor="#B8CCCC"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+        <!-- 8자 보행 돌아오기 -->
+        <LinearLayout
+            android:id="@+id/exercise_8_walk_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#FFF"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="50dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="8자 보행"
+                    android:textColor="#000"
+                    android:textFontWeight="700"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_family"
+                    android:letterSpacing="-0.01"
+                    android:text="Figure-of-8 Walk Test"
+                    android:textColor="#B8CCCC"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

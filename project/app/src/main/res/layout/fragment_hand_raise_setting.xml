@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:background="#30000000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius"
+        android:backgroundTint="@color/white"
+        android:padding="20dp"
+        android:layout_gravity="center_horizontal|center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:gravity="center"
+            android:background="@drawable/radius"
+            android:backgroundTint="@color/f3f8f7"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="타이머를 세팅해 주세요."
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#000000"
+                android:letterSpacing="-0.01" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <com.aigestudio.wheelpicker.WheelPicker
+                    android:id="@+id/hour_picker"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:wheel_item_text_size="20sp"
+                    app:wheel_visible_item_count="2"
+                    app:wheel_item_text_color="#597b7b7b"
+                    app:wheel_selected_item_text_color="#7b7b7b"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:textSize="20sp"
+                    android:textColor="#7b7b7b"
+                    android:letterSpacing="-0.01"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="30dp"
+                    android:text="시간"/>
+                <com.aigestudio.wheelpicker.WheelPicker
+                    android:id="@+id/minute_picker"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:wheel_item_text_size="20sp"
+                    app:wheel_visible_item_count="2"
+                    app:wheel_item_text_color="#597b7b7b"
+                    app:wheel_selected_item_text_color="#7b7b7b"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:textSize="20sp"
+                    android:textColor="#7b7b7b"
+                    android:letterSpacing="-0.01"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="30dp"
+                    android:text="분"/>
+                <com.aigestudio.wheelpicker.WheelPicker
+                    android:id="@+id/second_picker"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:wheel_item_text_size="20sp"
+                    app:wheel_visible_item_count="2"
+                    app:wheel_item_text_color="#597b7b7b"
+                    app:wheel_selected_item_text_color="#7b7b7b"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:textSize="20sp"
+                    android:textColor="#7b7b7b"
+                    android:letterSpacing="-0.01"
+                    android:layout_marginLeft="4dp"
+                    android:text="초"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:padding="30dp"
+            android:gravity="center"
+            android:background="@drawable/radius"
+            android:backgroundTint="@color/f3f8f7"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="어느쪽 손을 측정할까요?"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#000000"
+                android:letterSpacing="-0.01" />
+
+            <co.kr.myfitnote.core.ui.CustomCheckboxItem
+                android:id="@+id/hand_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text1_label="왼손"
+                app:text2_label="오른손"/>
+
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="130dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="왼손/오른손:"-->
+<!--                android:textSize="16sp" />-->
+<!--            <Spinner-->
+<!--                android:id="@+id/hand_spinner"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                />-->
+
+<!--        </LinearLayout>-->
+        <Button
+            android:id="@+id/leg_test_start_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="진행하기"
+            android:fontFamily="@font/pretendard_bold"
+            android:textSize="22sp"
+            android:textColor="#ffffff"
+            android:letterSpacing="-0.01"
+            android:backgroundTint="#00B0A6"
+            android:background="@drawable/radius" />
+    </LinearLayout>
+
+</FrameLayout>

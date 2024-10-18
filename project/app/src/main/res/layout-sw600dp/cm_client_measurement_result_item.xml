@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingHorizontal="46dp"
+    android:paddingVertical="36dp"
+    android:layout_marginBottom="28dp"
+    android:background="@drawable/radius"
+    android:backgroundTint="@color/white"
+    android:gravity="center"
+    >
+    <!-- 체크박스 -->
+    <CheckBox
+        android:id="@+id/item_checkbox"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/custom_checkbox"
+        android:button="@android:color/transparent"/>
+
+    <!-- 측정명 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/measurement_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_bold"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="#000000"
+            android:letterSpacing="-0.01"
+            android:text="안주영"
+        />
+
+
+    </LinearLayout>
+
+    <!-- 검사 정보 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <!-- 생년월일 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp">
+<!--            <TextView-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/pretendard_bold"-->
+<!--                android:textStyle="normal"-->
+<!--                android:textSize="24sp"-->
+<!--                android:textColor="#97a3a3"-->
+<!--                android:letterSpacing="-0.01"-->
+<!--                android:text="검사 날짜"/>-->
+
+            <TextView
+                android:id="@+id/did_date_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                android:fontFamily="@font/pretendard_regular"
+                android:textStyle="normal"
+                android:textSize="24sp"
+                android:textColor="#97a3a3"
+                android:letterSpacing="-0.01"
+                android:text="1957.01.20"/>
+        </LinearLayout>
+
+        <!-- 검사 결과 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_marginBottom="7dp">
+
+            <co.kr.myfitnote.core.ui.StarRatingView
+                android:id="@+id/star_rating_view"
+                android:layout_width="150dp"
+                android:layout_height="28dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

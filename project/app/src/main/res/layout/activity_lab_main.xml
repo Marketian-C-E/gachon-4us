@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <co.kr.myfitnote.core.mlkit.CameraSourcePreview
+                android:id="@+id/preview_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <co.kr.myfitnote.core.mlkit.GraphicOverlay
+                android:id="@+id/graphic_overlay"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="@id/preview_view"
+                app:layout_constraintEnd_toEndOf="@id/preview_view" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:lottie_fileName="congraturation.json"
+                app:lottie_speed="1.0"
+                app:layout_constraintStart_toStartOf="@id/preview_view"
+                app:layout_constraintEnd_toEndOf="@id/preview_view"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <!-- 수 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_gravity="right|center"
+        android:layout_marginRight="-20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/hr_board"
+            android:layout_width="82dp"
+            android:layout_height="262dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_hr_board_empty"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/pretendard_bold"
+            android:layout_marginTop="10dp"
+            android:letterSpacing="-0.01"
+            android:text="심박수"
+            android:textColor="#222222"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/hr_board"
+            app:layout_constraintStart_toStartOf="@+id/hr_board"
+            app:layout_constraintTop_toTopOf="@+id/hr_board" />
+
+        <TextView
+            android:id="@+id/hr_board_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:letterSpacing="-0.01"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="#222222"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/hr_board"
+            app:layout_constraintEnd_toEndOf="@+id/hr_board"
+            app:layout_constraintStart_toStartOf="@+id/hr_board"
+            app:layout_constraintTop_toTopOf="@+id/hr_board"
+            app:layout_constraintVertical_bias="0.14" />
+
+        <ProgressBar
+            android:id="@+id/hr_progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/gradient_progressbar"
+            android:rotation="270"
+            app:layout_constraintBottom_toBottomOf="@+id/hr_board"
+            app:layout_constraintEnd_toEndOf="@+id/hr_board"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/hr_board"
+            app:layout_constraintTop_toTopOf="@+id/hr_board"
+            app:layout_constraintVertical_bias="0.39" />
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/hr_board"-->
+        <!--                android:src="@drawable/ic_hr_board"-->
+        <!--                android:layout_width="164dp"-->
+        <!--                android:layout_height="515dp"-->
+        <!--                android:layout_alignParentTop="true"-->
+        <!--                android:layout_alignParentEnd="true" />-->
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_alignParentRight="true"-->
+        <!--                android:layout_marginTop="60dp"-->
+        <!--                android:layout_marginRight="46dp"-->
+        <!--                android:fontFamily="@font/pretendard_bold"-->
+        <!--                android:text="심박수"-->
+        <!--                android:textSize="25sp"-->
+        <!--                android:textColor="#222222"-->
+        <!--                android:letterSpacing="-0.01" />-->
+        <!--            <TextView-->
+        <!--                android:id="@+id/hr_board_text"-->
+        <!--                android:layout_width="100dp"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:textAlignment="center"-->
+        <!--                android:layout_alignParentRight="true"-->
+        <!--                android:layout_marginTop="80dp"-->
+        <!--                android:layout_marginRight="28dp"-->
+        <!--                android:text=""-->
+        <!--                android:textSize="59sp"-->
+        <!--                android:textColor="#222222"-->
+        <!--                android:letterSpacing="-0.01" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 개수 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom"
+        android:gravity="bottom|start"
+        android:background="@drawable/exercise_bottom_gradient">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginBottom="45dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_count_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="개수"
+                android:textSize="25sp"
+                android:textColor="#ffffff"
+                android:letterSpacing="-0.01" />
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_alignParentRight="true"
+                android:text="0 / 0"
+                android:textSize="54sp"
+                android:textColor="#ffffff"
+                android:letterSpacing="-0.01" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:gravity="center|top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/exercise_name_text_view"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/pretendard_bold"
+            android:text="운동 이름" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/logging_layout"
+        android:layout_width="300dp"
+        android:layout_height="500dp">
+
+        <Button
+            android:id="@+id/logging_toggle_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toggle Logging" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/logging_toggle_button">
+
+            <TextView
+                android:background="#f0ffffff"
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:minHeight="300dp"
+                android:text="" />
+        </ScrollView>
+    </RelativeLayout>
+    <!-- 상위 버튼 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="top|start" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="45dp"
+            android:orientation="vertical">
+            <!--            <ImageView-->
+            <!--                android:id="@+id/btn_stop"-->
+            <!--                android:layout_width="179dp"-->
+            <!--                android:layout_height="52dp"-->
+            <!--                android:src="@drawable/ic_stop_btn" />-->
+            <TextView
+                android:id="@+id/tv_logging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="개수"
+                android:textSize="25sp"
+                android:textColor="#ffffff"
+                android:letterSpacing="-0.01" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|center"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="100"
+            android:progressBackgroundTint="#000"
+            android:progressDrawable="@drawable/circle_progressbar"
+            android:progressTint="#fff" />
+        <TextView
+            android:id="@+id/seconds_view"
+            android:layout_gravity="center"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:shadowColor="#80000000"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"
+            android:fontFamily="@font/pretendard_bold"
+            android:textStyle="normal"
+            android:textSize="28sp"
+            android:textColor="#000"
+            android:textAlignment="center"
+            android:typeface="monospace"
+            android:gravity="center"
+            android:background="@drawable/circle_background"
+            android:backgroundTint="#ccc"
+            android:text="0" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/skip_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius_30"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp"
+        android:backgroundTint="@color/n_blue"
+        android:text="다음 운동"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="45dp"
+        android:layout_marginRight="30dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:fontFamily="@font/pretendard_bold"
+        />
+
+    <!-- Notice View -->
+    <co.kr.myfitnote.core.ui.NoticeView
+        android:visibility="gone"
+        android:id="@+id/notice_view"
+        android:layout_marginTop="70dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center" />
+</FrameLayout>

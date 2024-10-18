@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/f3f8f7"
+    tools:context=".cm.ui.client.ClientSearchFragment"
+    android:orientation="vertical"
+    >
+    
+    <LinearLayout
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_border"
+            android:backgroundTint="#efefef"
+            android:fontFamily="@font/pretendard_regular"
+            android:hint="이용자를 검색해 주세요."
+            android:paddingHorizontal="13dp"
+            android:paddingLeft="22dp"
+            android:layout_marginRight="25dp"
+            android:inputType="textPersonName"
+            />
+        
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/ic_search"
+            android:backgroundTint="#626262"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/clientRecyclerView"
+        android:padding="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

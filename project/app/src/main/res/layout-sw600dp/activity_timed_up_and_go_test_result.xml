@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F3F8F7"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="45dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="43sp"
+                android:textColor="#2C2C2C"
+                android:letterSpacing="-0.01"
+                android:layout_marginTop="35dp"
+                android:text="회원님의 결과입니다."
+                android:fontFamily="@font/font_family"/>
+
+            <!-- 검사 결과 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="60dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="28sp"
+                    android:letterSpacing="-0.01"
+                    android:textColor="#252525"
+                    android:textFontWeight="700"
+                    android:fontFamily="@font/font_family"
+                    android:layout_marginLeft="39dp"
+                    android:text="검사 결과" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp">
+                    <TableRow
+                        android:minHeight="80dp"
+                        android:background="@drawable/radius"
+                        android:backgroundTint="#DEF1ED"
+                        android:gravity="center"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="26sp"
+                            android:textFontWeight="700"
+                            android:textAlignment="center"
+                            android:text="시간"
+                            android:textColor="#8FBCB3"
+                            android:fontFamily="@font/font_family"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="26sp"
+                            android:textFontWeight="700"
+                            android:textAlignment="center"
+                            android:text="등급"
+                            android:textColor="#8FBCB3"
+                            android:fontFamily="@font/font_family" />
+                    </TableRow>
+
+                    <TableRow
+                        android:minHeight="80dp"
+                        android:background="@drawable/radius"
+                        android:backgroundTint="#FFF"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/seconds_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textFontWeight="700"
+                                android:fontFamily="@font/font_family"
+                                android:letterSpacing="-0.01"
+                                android:text="00"
+                                android:textColor="#474747"
+                                android:textSize="26sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textFontWeight="700"
+                                android:fontFamily="@font/font_family"
+                                android:letterSpacing="-0.01"
+                                android:text="초"
+                                android:textColor="#474747"
+                                android:textSize="26sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/grade_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textFontWeight="700"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:text="1"
+                            android:textColor="#474747"
+                            android:letterSpacing="-0.01"
+                            android:fontFamily="@font/font_family"
+                            android:textSize="26sp" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="63dp"
+                android:background="#C4DAD5"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

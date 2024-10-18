@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.HomeActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0"
+        app:navGraph="@navigation/nav_graph" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_bottom_nav" />
+
+
+    <!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="36dp"-->
+<!--            android:orientation="vertical">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/linearLayout4"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+<!--            <LinearLayout-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <TextView-->
+<!--                    android:id="@+id/user_auth_token"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:lineSpacingExtra="4sp"-->
+<!--                    android:text="홍길동님"-->
+<!--                    android:textColor="#ffffff"-->
+<!--                    android:textSize="36sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:lineSpacingExtra="5sp"-->
+<!--                    android:text="안녕하세요.\n무엇을 도와드릴까요?"-->
+<!--                    android:textColor="#ffffff"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    tools:layout_editor_absoluteX="71dp"-->
+<!--                    tools:layout_editor_absoluteY="130dp" />-->
+<!--            </LinearLayout>-->
+<!--&lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                android:orientation="vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginLeft="33dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:paddingVertical="12dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:paddingHorizontal="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:gravity="center_horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:background="@drawable/gradient_grey"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content">&ndash;&gt;-->
+<!--&lt;!&ndash;                <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="현재 건강 상태"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textStyle="bold"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textSize="16sp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textColor="#ffffff"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:lineSpacingExtra="5sp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_marginBottom="10dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    />&ndash;&gt;-->
+<!--&lt;!&ndash;                <co.kr.wchangup.views.view.PhysicalStatusView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="26dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_marginBottom="6dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="종목"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:level="1" />&ndash;&gt;-->
+<!--&lt;!&ndash;                <co.kr.wchangup.views.view.PhysicalStatusView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="26dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_marginBottom="6dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="종목"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:level="2" />&ndash;&gt;-->
+<!--&lt;!&ndash;                <co.kr.wchangup.views.view.PhysicalStatusView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="26dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_marginBottom="6dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="종목"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:level="2" />&ndash;&gt;-->
+<!--&lt;!&ndash;            </LinearLayout>&ndash;&gt;-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/linearLayout5"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:background="@drawable/border_radius_white"-->
+<!--            android:orientation="vertical"-->
+<!--            android:paddingHorizontal="20dp"-->
+<!--            android:paddingVertical="14dp"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/linearLayout4"-->
+<!--            tools:layout_editor_absoluteX="36dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:lineSpacingExtra="21.5sp"-->
+<!--                android:text="마지막 검사 날짜"-->
+<!--                android:textColor="#ffffff"-->
+<!--                android:textSize="15.5sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/last_did_date"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:lineSpacingExtra="21.5sp"-->
+<!--                android:text="2022년 11월 13일"-->
+<!--                android:textColor="#ffffff"-->
+<!--                android:textSize="15.5sp"-->
+<!--                android:textStyle="bold" />-->
+<!--        </LinearLayout>-->
+
+<!--        <TableLayout-->
+<!--            android:layout_marginTop="18dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/linearLayout5"-->
+<!--            >-->
+<!--            <TableRow-->
+<!--                android:layout_marginBottom="12dp">-->
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/menu1"-->
+<!--                    android:clickable="true"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:padding="12dp"-->
+<!--                    android:layout_marginRight="14dp"-->
+<!--                    android:background="@drawable/gradient_blue"-->
+<!--                    >-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:gravity="center"-->
+<!--                        android:paddingTop="5dp"-->
+<!--                        android:background="@drawable/button_border">-->
+<!--                        <ImageView-->
+<!--                            android:layout_width="58dp"-->
+<!--                            android:layout_height="58dp"-->
+<!--                            android:src="@drawable/b" />-->
+<!--                        <Button-->
+<!--                            android:id="@+id/step1"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@android:color/transparent"-->
+<!--                            android:text="측정 전 설문"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:textSize="14.5sp"-->
+<!--                            android:textColor="#ffffff"-->
+<!--                            android:lineSpacingExtra="27sp"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            tools:layout_editor_absoluteY="278dp" />-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/menu2"-->
+<!--                    android:clickable="true"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/gradient_pink"-->
+<!--                    android:padding="12dp"-->
+<!--                    >-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:gravity="center"-->
+<!--                        android:paddingTop="5dp"-->
+<!--                        android:background="@drawable/button_border">-->
+<!--                        <ImageView-->
+<!--                            android:layout_width="58dp"-->
+<!--                            android:layout_height="58dp"-->
+<!--                            android:src="@drawable/a" />-->
+<!--                        <Button-->
+<!--                            android:id="@+id/physical_test_btn"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@android:color/transparent"-->
+<!--                            android:text="신체기능검사"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:textSize="14.5sp"-->
+<!--                            android:textColor="#ffffff"-->
+<!--                            android:lineSpacingExtra="27sp"-->
+<!--                            tools:layout_editor_absoluteX="4dp"-->
+<!--                            tools:layout_editor_absoluteY="615dp" />-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+<!--            </TableRow>-->
+<!--            <TableRow>-->
+<!--                <LinearLayout-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:padding="12dp"-->
+<!--                    android:layout_marginRight="14dp"-->
+<!--                    android:background="@drawable/gradient_green"-->
+<!--                    >-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:gravity="center"-->
+<!--                        android:paddingTop="5dp"-->
+<!--                        android:background="@drawable/button_border">-->
+<!--                        <ImageView-->
+<!--                            android:layout_width="58dp"-->
+<!--                            android:layout_height="58dp"-->
+<!--                            android:src="@drawable/d" />-->
+<!--                        <Button-->
+<!--                            android:id="@+id/step3"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@android:color/transparent"-->
+<!--                            android:text="고객센터"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:textSize="14.5sp"-->
+<!--                            android:textColor="#ffffff"-->
+<!--                            android:lineSpacingExtra="27sp"-->
+<!--                            tools:layout_editor_absoluteX="2dp"-->
+<!--                            tools:layout_editor_absoluteY="450dp" />-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+<!--                <LinearLayout-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:padding="12dp"-->
+<!--                    android:background="@drawable/gradient_navy"-->
+<!--                    >-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:gravity="center"-->
+<!--                        android:paddingTop="5dp"-->
+<!--                        android:background="@drawable/button_border">-->
+<!--                        <ImageView-->
+<!--                            android:layout_width="58dp"-->
+<!--                            android:layout_height="58dp"-->
+<!--                            android:src="@drawable/c" />-->
+<!--                        <Button-->
+<!--                            android:id="@+id/step4"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@android:color/transparent"-->
+<!--                            android:text="회원정보"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:textSize="14.5sp"-->
+<!--                            android:textColor="#ffffff"-->
+<!--                            android:lineSpacingExtra="27sp"-->
+<!--                            tools:layout_editor_absoluteX="-24dp"-->
+<!--                            tools:layout_editor_absoluteY="515dp" />-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+<!--            </TableRow>-->
+<!--        </TableLayout>-->
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

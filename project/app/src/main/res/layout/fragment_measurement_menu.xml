@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F8F7">
+
+    <TextView
+        android:id="@+id/cm_ms_header_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginHorizontal="57dp"
+        android:text="{}"
+        android:textSize="34sp"
+        android:letterSpacing="-0.01"
+        android:textColor="#1C1C1C"
+        android:fontFamily="@font/font_family"
+        android:textFontWeight="700"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 검사 버튼 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="36dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#F3F8F7"
+            android:orientation="vertical">
+            <!-- 자세 측정 -->
+            <LinearLayout
+                android:id="@+id/cm_ms_position_measurement_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/radius"
+                android:backgroundTint="#FFF"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="40dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_family"
+                        android:letterSpacing="-0.01"
+                        android:text="자세 측정"
+                        android:textColor="#000"
+                        android:textFontWeight="700"
+                        android:textSize="27sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right" />
+            </LinearLayout>
+
+            <!-- 관절 가동범위 -->
+            <LinearLayout
+                android:id="@+id/cm_ms_rom_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/radius"
+                android:backgroundTint="#FFF"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="40dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_family"
+                        android:letterSpacing="-0.01"
+                        android:text="관절가동범위"
+                        android:textColor="#000"
+                        android:textFontWeight="700"
+                        android:textSize="27sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right" />
+            </LinearLayout>
+
+            <!-- 외발서기 -->
+            <LinearLayout
+                android:id="@+id/cm_ms_singleleg_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/radius"
+                android:backgroundTint="#FFF"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="40dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_family"
+                        android:letterSpacing="-0.01"
+                        android:text="외발서기"
+                        android:textColor="#000"
+                        android:textFontWeight="700"
+                        android:textSize="27sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right" />
+            </LinearLayout>
+
+            <!-- 외 발서기 검사 -->
+            <LinearLayout
+                android:id="@+id/cm_ms_lower_msucle_function_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/radius"
+                android:backgroundTint="#FFF"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="40dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_family"
+                        android:letterSpacing="-0.01"
+                        android:text="하지 근기능"
+                        android:textColor="#000"
+                        android:textFontWeight="700"
+                        android:textSize="27sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cm_ms_upper_msucle_function_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/radius"
+                android:backgroundTint="#FFF"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="40dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_family"
+                        android:letterSpacing="-0.01"
+                        android:text="상지 근기능"
+                        android:textColor="#000"
+                        android:textFontWeight="700"
+                        android:textSize="27sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right" />
+            </LinearLayout>
+
+            <!-- 2분 제자리 걷기 -->
+            <LinearLayout
+                android:id="@+id/cm_ms_cardiorespiratory_function_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/radius"
+                android:backgroundTint="#FFF"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="40dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_family"
+                        android:letterSpacing="-0.01"
+                        android:text="심폐 기능"
+                        android:textColor="#000"
+                        android:textFontWeight="700"
+                        android:textSize="27sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right" />
+            </LinearLayout>
+
+            <!-- 스텝 검사 -->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/cm_ms_step_test_btn"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                android:background="@drawable/radius"-->
+<!--                android:backgroundTint="#FFF"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingHorizontal="16dp"-->
+<!--                android:paddingVertical="40dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="30dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/font_family"-->
+<!--                        android:letterSpacing="-0.01"-->
+<!--                        android:text="스텝 검사"-->
+<!--                        android:textColor="#000"-->
+<!--                        android:textFontWeight="700"-->
+<!--                        android:textSize="27sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/ic_arrow_right" />-->
+<!--            </LinearLayout>-->
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/radius1"
+    android:backgroundTint="@color/white"
+    android:layout_gravity="center_horizontal"
+    android:padding="40dp">
+
+    <TextView
+        android:id="@+id/rom_result_item_type_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/pretendard_regular"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:textColor="#3b434f"
+        android:lineSpacingExtra="-1sp"
+        android:gravity="center_horizontal"
+        android:text="{타입}" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#999999">
+    </View>
+
+    <TextView
+        android:id="@+id/rom_result_item_value_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/pretendard_regular"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:textColor="@color/GREEN_1"
+        android:lineSpacingExtra="-1sp"
+        android:gravity="center_horizontal"
+        android:text="{120°}" />
+
+</LinearLayout>

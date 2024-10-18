@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:background="#30000000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--    <TextView-->
+<!--        android:id="@+id/title_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="21sp"-->
+<!--        android:textColor="#fff"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textAlignment="center"-->
+<!--        android:layout_gravity="center_horizontal|top"-->
+<!--        android:paddingLeft="36dp"-->
+<!--        android:paddingRight="36dp"-->
+<!--        android:text=""/>-->
+
+    <LinearLayout
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius"
+        android:backgroundTint="@color/white"
+        android:padding="30dp"
+        android:layout_gravity="center_horizontal|center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:padding="30dp"
+            android:gravity="center"
+            android:background="@drawable/radius"
+            android:backgroundTint="@color/f3f8f7"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="어느쪽 다리를 측정할까요?"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:textStyle="bold"
+                android:textSize="35sp"
+                android:textColor="#000000"
+                android:letterSpacing="-0.01" />
+
+            <co.kr.myfitnote.core.ui.CustomCheckboxItem
+                android:id="@+id/leg_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                app:text1_label="왼발들기"
+                app:text2_label="오른발들기"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:padding="30dp"
+            android:gravity="center"
+            android:background="@drawable/radius"
+            android:backgroundTint="@color/f3f8f7"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="눈을 감고 할까요, 뜨고 할까요??"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:textStyle="bold"
+                android:textSize="35sp"
+                android:textColor="#000000"
+                android:letterSpacing="-0.01" />
+
+            <co.kr.myfitnote.core.ui.CustomCheckboxItem
+                android:id="@+id/eye_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                app:text1_label="눈감고"
+                app:text2_label="눈뜨고"/>
+
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="30dp"-->
+<!--            android:padding="30dp"-->
+<!--            android:gravity="center"-->
+<!--            android:background="@drawable/radius"-->
+<!--            android:backgroundTint="@color/f3f8f7"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="어느쪽 다리를 측정할까요?"-->
+<!--                android:layout_marginBottom="30dp"-->
+<!--                android:fontFamily="@font/pretendard_bold"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="35sp"-->
+<!--                android:textColor="#000000"-->
+<!--                android:letterSpacing="-0.01" />-->
+<!--            <Spinner-->
+<!--                android:id="@+id/leg_spinner"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="30dp"-->
+<!--            android:padding="30dp"-->
+<!--            android:gravity="center"-->
+<!--            android:background="@drawable/radius"-->
+<!--            android:backgroundTint="@color/f3f8f7"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="눈을 감고 할까요, 뜨고 할까요?"-->
+<!--                android:layout_marginBottom="30dp"-->
+<!--                android:fontFamily="@font/pretendard_bold"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="35sp"-->
+<!--                android:textColor="#000000"-->
+<!--                android:letterSpacing="-0.01" />-->
+<!--            <Spinner-->
+<!--                android:id="@+id/eye_spinner"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                />-->
+
+<!--        </LinearLayout>-->
+
+        <Button
+            android:id="@+id/leg_test_start_btn"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:text="진행하기"
+            android:fontFamily="@font/pretendard_bold"
+            android:textSize="35sp"
+            android:textColor="#ffffff"
+            android:letterSpacing="-0.01"
+            android:backgroundTint="#00B0A6"
+            android:background="@drawable/radius" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cm_nav_graph"
+    app:startDestination="@id/homeFragment2">
+
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="co.kr.myfitnote.cm.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_clientCreateFragment"
+            app:destination="@id/clientCreateFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_clientSearchFragment"
+            app:destination="@id/clientSearchFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_myScreenFragment2"
+            app:destination="@id/myScreenFragment2" />
+        <action
+            android:id="@+id/action_homeFragment2_to_experienceMenuFragment"
+            app:destination="@id/experienceMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/clientCreateFragment"
+        android:name="co.kr.myfitnote.cm.ui.client.ClientCreateFragment"
+        android:label="fragment_client_create"
+        tools:layout="@layout/fragment_client_create" >
+        <action
+            android:id="@+id/action_clientCreateFragment_to_policyFragment"
+            app:destination="@id/policyFragment" />
+        <action
+            android:id="@+id/action_clientCreateFragment_to_privacyFragment"
+            app:destination="@id/privacyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/clientSearchFragment"
+        android:name="co.kr.myfitnote.cm.ui.client.ClientSearchFragment"
+        android:label="fragment_client_search"
+        tools:layout="@layout/fragment_client_search" >
+        <action
+            android:id="@+id/action_clientSearchFragment_to_measurementMenuFragment"
+            app:destination="@id/measurementMenuFragment" />
+        <action
+            android:id="@+id/action_clientSearchFragment_to_measurementResultListFragment"
+            app:destination="@id/measurementResultListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/measurementMenuFragment"
+        android:name="co.kr.myfitnote.cm.ui.measurement.MeasurementMenuFragment"
+        android:label="fragment_measurement_menu"
+        tools:layout="@layout/fragment_measurement_menu" >
+        <action
+            android:id="@+id/action_measurementMenuFragment_to_seatDownUpMeasurementActivity"
+            app:destination="@id/seatDownUpMeasurementActivity" />
+        <action
+            android:id="@+id/action_measurementMenuFragment_to_walkMeasurementActivity"
+            app:destination="@id/walkMeasurementActivity" />
+        <action
+            android:id="@+id/action_measurementMenuFragment_to_singleLegMeasurementActivity"
+            app:destination="@id/singleLegMeasurementActivity" />
+        <action
+            android:id="@+id/action_measurementMenuFragment_to_handraiseMeasurementActivity"
+            app:destination="@id/handraiseMeasurementActivity" />
+        <action
+            android:id="@+id/action_measurementMenuFragment_to_romMenuFragment2"
+            app:destination="@id/romMenuFragment2" />
+        <action
+            android:id="@+id/action_measurementMenuFragment_to_poseMenuFragment2"
+            app:destination="@id/poseMenuFragment2" />
+
+    </fragment>
+    <activity
+        android:id="@+id/seatDownUpMeasurementActivity"
+        android:name="co.kr.myfitnote.measurement.ui.seatdownup.SeatDownUpMeasurementActivity"
+        android:label="SeatDownUpMeasurementActivity" />
+    <activity
+        android:id="@+id/walkMeasurementActivity"
+        android:name="co.kr.myfitnote.measurement.ui.walk.WalkMeasurementActivity"
+        android:label="activity_walk_measurement"
+        tools:layout="@layout/activity_walk_measurement" />
+    <activity
+        android:id="@+id/singleLegMeasurementActivity"
+        android:name="co.kr.myfitnote.measurement.ui.singleleg.SingleLegMeasurementActivity"
+        android:label="SingleLegMeasurementActivity" />
+    <activity
+        android:id="@+id/handraiseMeasurementActivity"
+        android:name="co.kr.myfitnote.measurement.ui.handraise.HandraiseMeasurementActivity"
+        android:label="HandraiseMeasurementActivity" />
+    <fragment
+        android:id="@+id/measurementResultListFragment"
+        android:name="co.kr.myfitnote.cm.ui.measurement.MeasurementResultListFragment"
+        android:label="MeasurementResultListFragment" >
+        <action
+            android:id="@+id/action_measurementResultListFragment_to_measurementFinalResultFragment"
+            app:destination="@id/measurementFinalResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/measurementFinalResultFragment"
+        android:name="co.kr.myfitnote.cm.ui.measurement.MeasurementFinalResultFragment"
+        android:label="fragment_measurement_final_result"
+        tools:layout="@layout/fragment_measurement_final_result" >
+        <action
+            android:id="@+id/action_measurementFinalResultFragment_to_makePrescriptionFragment"
+            app:destination="@id/makePrescriptionFragment" />
+        <action
+            android:id="@+id/action_measurementFinalResultFragment_to_resultPage32"
+            app:destination="@id/resultPage32" />
+    </fragment>
+    <fragment
+        android:id="@+id/romMenuFragment2"
+        android:name="co.kr.myfitnote.views.rom.RomMenuFragment"
+        android:label="RomMenuFragment" >
+        <action
+            android:id="@+id/action_romMenuFragment2_to_ROMMeasurementActivity"
+            app:destination="@id/ROMMeasurementActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/poseMenuFragment2"
+        android:name="co.kr.myfitnote.views.pose.PoseMenuFragment"
+        android:label="PoseMenuFragment" >
+        <action
+            android:id="@+id/action_poseMenuFragment2_to_poseMeasurementActivity2"
+            app:destination="@id/poseMeasurementActivity2" />
+    </fragment>
+    <activity
+        android:id="@+id/ROMMeasurementActivity"
+        android:name="co.kr.myfitnote.views.rom.ROMMeasurementActivity"
+        android:label="ROMMeasurementActivity" />
+    <activity
+        android:id="@+id/poseMeasurementActivity2"
+        android:name="co.kr.myfitnote.views.pose.PoseMeasurementActivity"
+        android:label="PoseMeasurementActivity" />
+    <fragment
+        android:id="@+id/makePrescriptionFragment"
+        android:name="co.kr.myfitnote.cm.ui.prescription.makePrescriptionFragment"
+        android:label="fragment_make_prescription"
+        tools:layout="@layout/fragment_make_prescription" />
+
+    <fragment
+        android:id="@+id/myScreenFragment2"
+        android:name="co.kr.myfitnote.cm.ui.my.MyScreenFragment"
+        android:label="fragment_my_screen"
+        tools:layout="@layout/fragment_my_screen" >
+        <action
+            android:id="@+id/action_myScreenFragment2_to_connectBluetoothDeviceFragment"
+            app:destination="@id/connectBluetoothDeviceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/connectBluetoothDeviceFragment"
+        android:name="co.kr.myfitnote.cm.ui.my.ConnectBluetoothDeviceFragment"
+        android:label="fragment_connect_bluetooth_device"
+        tools:layout="@layout/fragment_connect_bluetooth_device" />
+    <fragment
+        android:id="@+id/policyFragment"
+        android:name="co.kr.myfitnote.core.ui.agree.PolicyFragment"
+        android:label="fragment_privacy"
+        tools:layout="@layout/fragment_privacy" />
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="co.kr.myfitnote.core.ui.agree.PrivacyFragment"
+        android:label="PrivacyFragment" />
+    <fragment
+        android:id="@+id/experienceMenuFragment"
+        android:name="co.kr.myfitnote.cm.ui.experience.ExperienceMenuFragment"
+        android:label="ExperienceMenuFragment" >
+        <action
+            android:id="@+id/action_experienceMenuFragment_to_singleLegMeasurementActivity"
+            app:destination="@id/singleLegMeasurementActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultPage32"
+        android:name="co.kr.myfitnote.cm.ui.measurement.ChangingResult"
+        android:label="fragment_result_page3"
+        tools:layout="@layout/fragment_result_page3" />
+    <fragment
+        android:id="@+id/companyLinkFragment2"
+        android:name="co.kr.myfitnote.CompanyLinkFragment"
+        android:label="fragment_company_link"
+        tools:layout="@layout/fragment_company_link" />
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="co.kr.myfitnote.InformationFragment"
+        android:label="InformationFragment" />
+    <fragment
+        android:id="@+id/boardFragment"
+        android:name="co.kr.myfitnote.BoardFragment"
+        android:label="BoardFragment" >
+        <action
+            android:id="@+id/action_boardFragment_to_boardDetailFragment"
+            app:destination="@id/boardDetailFragment" />
+        <action
+            android:id="@+id/action_boardFragment_to_boardWriteFragment"
+            app:destination="@id/boardWriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/boardDetailFragment"
+        android:name="co.kr.myfitnote.BoardDetailFragment"
+        android:label="fragment_board_detail"
+        tools:layout="@layout/fragment_board_detail" />
+    <fragment
+        android:id="@+id/boardWriteFragment"
+        android:name="co.kr.myfitnote.BoardWriteFragment"
+        android:label="fragment_board_write"
+        tools:layout="@layout/fragment_board_write" />
+</navigation>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eff7f7"
+    android:orientation="vertical"
+    android:padding="40dp"
+    android:fillViewport="true"
+    tools:context=".cm.ui.measurement.ChangingResult">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <!-- 자세 측정 정면 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_family"
+                android:letterSpacing="-0.01"
+                android:textAlignment="center"
+                android:textColor="#252525"
+                android:textFontWeight="700"
+                android:textSize="18sp"
+                android:text="자세 측정 (정면)"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pose_front_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+
+        </LinearLayout>
+
+        <!-- 자세 측정 측면 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_family"
+                android:letterSpacing="-0.01"
+                android:textAlignment="center"
+                android:textColor="#252525"
+                android:textFontWeight="700"
+                android:textSize="18sp"
+                android:text="자세 측정 (측면)"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pose_side_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+
+        </LinearLayout>
+
+        <!-- 어깨 좌 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_family"
+                android:letterSpacing="-0.01"
+                android:textAlignment="center"
+                android:textColor="#252525"
+                android:textFontWeight="700"
+                android:textSize="18sp"
+                android:text="어깨 (우)"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rom_shoulder_left_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+
+        </LinearLayout>
+
+        <!-- 어깨 우 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_family"
+                android:letterSpacing="-0.01"
+                android:textAlignment="center"
+                android:textColor="#252525"
+                android:textFontWeight="700"
+                android:textSize="18sp"
+                android:text="어깨 (우)"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rom_shoulder_right_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+
+        </LinearLayout>
+
+        <!-- 고관절 좌 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_family"
+                android:letterSpacing="-0.01"
+                android:textAlignment="center"
+                android:textColor="#252525"
+                android:textFontWeight="700"
+                android:textSize="18sp"
+                android:text="고관절 (좌)"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rom_hip_left_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+
+        </LinearLayout>
+
+        <!-- 고관절 좌 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_family"
+                android:letterSpacing="-0.01"
+                android:textAlignment="center"
+                android:textColor="#252525"
+                android:textFontWeight="700"
+                android:textSize="18sp"
+                android:text="고관절 (우)"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rom_hip_right_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+
+        </LinearLayout>
+
+        <!-- 외발 서기 -->
+        <TextView
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_family"
+            android:letterSpacing="-0.01"
+            android:textAlignment="center"
+            android:textColor="#252525"
+            android:textFontWeight="700"
+            android:textSize="18sp"
+            android:text="외발서기 (초)"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_marginBottom="30dp">
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/singleleg_chart"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="0dp"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <!-- 하지 근기능 -->
+        <TextView
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_family"
+            android:letterSpacing="-0.01"
+            android:textAlignment="center"
+            android:textColor="#252525"
+            android:textFontWeight="700"
+            android:textSize="18sp"
+            android:text="하지 근기능 (회)"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp">
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/seatedup_chart"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <!-- 상지 근기능 -->
+        <TextView
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_family"
+            android:letterSpacing="-0.01"
+            android:textAlignment="center"
+            android:textColor="#252525"
+            android:textFontWeight="700"
+            android:textSize="18sp"
+            android:text="상지 근기능 (회)"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp">
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/upper_chart"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="0dp"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <!-- 심폐 기능 -->
+        <TextView
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_family"
+            android:letterSpacing="-0.01"
+            android:textAlignment="center"
+            android:textColor="#252525"
+            android:textFontWeight="700"
+            android:textSize="18sp"
+            android:text="심폐 기능 (회)"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp">
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/walk_chart"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="0dp"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
+

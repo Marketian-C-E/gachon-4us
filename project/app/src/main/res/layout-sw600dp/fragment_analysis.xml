@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/f3f8f7"
+        android:paddingHorizontal="52dp"
+        android:orientation="vertical"
+        tools:context=".client.ui.analysis.AnalysisFragment">
+        <!-- 헤더 -->
+        <TextView
+            android:id="@+id/header_sub_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_regular"
+            android:textSize="28sp"
+            android:textColor="#999999"
+            android:letterSpacing="-0.01"
+            android:layout_marginTop="52dp"
+            android:layout_marginLeft="39dp"
+            android:text="현재 고객님은 운동 1일차입니다."/>
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_bold"
+            android:textSize="43sp"
+            android:textColor="#1c1c1c"
+            android:letterSpacing="-0.01"
+            android:layout_marginLeft="39dp"
+            android:layout_marginBottom="36dp"
+            android:text="고객님의 운동 통계"/>
+
+        <!-- 통계 달력 -->
+        <TextView
+            android:id="@+id/selected_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_bold"
+            android:textSize="30sp"
+            android:textColor="#1c1c1c"
+            android:layout_marginBottom="10dp"
+            android:letterSpacing="-0.01"
+            android:textAlignment="center"
+            android:text="YYYY-MM" />
+        <com.haibin.calendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:month_view_show_mode="mode_only_current"
+            app:week_background="@color/GREEN_1"
+            app:week_text_color="@color/white"
+            app:month_view="co.kr.myfitnote.core.ui.calendar.CustomMonthView"
+            />
+
+        <!-- 신체 숙련도 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_bold"
+            android:textStyle="bold"
+            android:textSize="32sp"
+            android:textColor="#3d3d3d"
+            android:letterSpacing="-0.01"
+            android:layout_marginLeft="39dp"
+            android:layout_marginTop="57dp"
+            android:layout_marginBottom="30dp"
+            android:text="나의 신체 숙련도"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radius"
+            android:backgroundTint="@color/white"
+            android:padding="40dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="270dp"
+                android:layout_height="530dp"
+                android:layout_marginRight="34dp"
+                android:src="@drawable/img_back_body" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- 상체 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="40dp"
+                    android:background="@drawable/radius"
+                    android:backgroundTint="@color/GREEN_1"
+                    android:gravity="center"
+                    android:layout_marginBottom="27dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_bold"
+                        android:textSize="38sp"
+                        android:textColor="#ffffff"
+                        android:letterSpacing="-0.01"
+                        android:layout_marginBottom="47dp"
+                        android:text="상체"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_regular"
+                        android:textSize="30sp"
+                        android:textColor="#ffffff"
+                        android:letterSpacing="-0.01"
+                        android:textAlignment="center"
+                        android:text="고객님의 상체 능력은 상위 80%입니다."/>
+                </LinearLayout>
+
+                <!-- 하체 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="40dp"
+                    android:background="@drawable/radius"
+                    android:backgroundTint="@color/GREEN_1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_bold"
+                        android:textSize="38sp"
+                        android:textColor="#ffffff"
+                        android:letterSpacing="-0.01"
+                        android:layout_marginBottom="47dp"
+                        android:text="하체"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_regular"
+                        android:textSize="30sp"
+                        android:textColor="#ffffff"
+                        android:letterSpacing="-0.01"
+                        android:textAlignment="center"
+                        android:text="고객님의 하체 능력은 상위 70%입니다."/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

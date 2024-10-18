@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="RegisterViewModel"
+            type="co.kr.myfitnote.viewmodels.RegisterViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".views.RegisterActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp"
+                android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+            <!-- 상단 헤더 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="40dp"
+                android:layout_marginHorizontal="84dp">
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="23dp"
+                    android:text="@string/register_header"
+                    android:lineSpacingExtra="3sp"
+                    android:letterSpacing="-0.01"
+                    android:textColor="#1C1C1C"
+                    android:textSize="43sp"
+                    android:fontFamily="@font/font_family"
+                    />
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="23dp"
+                    android:text="@string/register_subtitle"
+                    android:letterSpacing="-0.01"
+                    android:textColor="#AAACAE"
+                    android:textSize="26sp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="기본정보"
+                        android:letterSpacing="-0.01"
+                        android:textColor="#363636"
+                        android:textSize="28sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="* 표시는 필수입력"
+                        android:gravity="right|top"
+                        android:letterSpacing="-0.01"
+                        android:textColor="#009389"
+                        android:textSize="28sp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 입력창 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="40dp"
+                android:layout_marginHorizontal="50dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginBottom="34dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="34dp"
+                        android:textSize="26sp"
+                        android:textColor="#9DABAA"
+                        android:letterSpacing="-0.1"
+                        android:lineSpacingExtra="19sp"
+                        android:layout_marginBottom="30dp"
+                        android:text="연락처 (아이디) *"
+                        />
+
+                    <EditText
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:paddingLeft="34dp"
+                        android:background="@drawable/rectangle_1"
+                        android:hint="예) 01012345678"
+                        android:textColorHint="#B9CAC9"
+                        android:inputType="phone"
+                        android:textSize="26sp"
+                        android:text="@={RegisterViewModel.phone}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginBottom="34dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="34dp"
+                        android:textSize="26sp"
+                        android:textColor="#9DABAA"
+                        android:letterSpacing="-0.1"
+                        android:layout_marginBottom="30dp"
+                        android:text="비밀번호 *"
+                        />
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="34dp"
+                        android:background="@drawable/rectangle_1"
+                        android:hint="비밀번호"
+                        android:textColorHint="#B9CAC9"
+                        android:inputType="textPassword"
+                        android:textSize="26sp"
+                        android:text="@={RegisterViewModel.password}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginBottom="34dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="34dp"
+                        android:textSize="26sp"
+                        android:textColor="#9DABAA"
+                        android:letterSpacing="-0.1"
+                        android:layout_marginBottom="30dp"
+                        android:text="이름 *"
+                        />
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/rectangle_1"
+                        android:hint="예) 홍길동"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="34dp"
+                        android:text="@={RegisterViewModel.name}"
+                        android:textColorHint="#B9CAC9"
+                        android:textSize="26sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginBottom="34dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="34dp"
+                        android:textSize="26sp"
+                        android:textColor="#9DABAA"
+                        android:letterSpacing="-0.1"
+                        android:layout_marginBottom="30dp"
+                        android:text="성별 *"
+                        />
+
+                    <RadioGroup
+                        android:id="@+id/sex_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/man"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="120dp"
+                            android:textSize="26sp"
+                            android:textColor="#B9CAC9"
+                            android:letterSpacing="-0.1"
+                            android:text="남성" />
+
+                        <RadioButton
+                            android:id="@+id/woman"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="26sp"
+                            android:textColor="#B9CAC9"
+                            android:letterSpacing="-0.1"
+                            android:text="여성" />
+                    </RadioGroup>
+                </LinearLayout>
+                <!-- 생년월일-->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginBottom="34dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="34dp"
+                        android:textSize="26sp"
+                        android:textColor="#9DABAA"
+                        android:letterSpacing="-0.1"
+                        android:layout_marginBottom="30dp"
+                        android:text="생년월일 *" />
+
+                    <DatePicker
+                        android:id="@+id/birth_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:calendarViewShown="false"
+                        android:datePickerMode="spinner"
+                        android:textSize="26sp"
+                        android:inputType="textPersonName" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginBottom="34dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:textSize="26sp"
+                    android:textColor="#9DABAA"
+                    android:letterSpacing="-0.1"
+                    android:layout_marginBottom="30dp"
+                    android:text="신장 *"
+                    />
+                <EditText
+                    android:id="@+id/height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:paddingLeft="34dp"
+                    android:background="@drawable/rectangle_1"
+                    android:hint="예) 165"
+                    android:textColorHint="#B9CAC9"
+                    android:inputType="number"
+                    android:textSize="26sp"
+                    android:text="@={RegisterViewModel.height}" />
+            </LinearLayout>
+            <LinearLayout
+                 android:orientation="vertical"
+                android:layout_marginBottom="34dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:textSize="26sp"
+                    android:textColor="#9DABAA"
+                    android:letterSpacing="-0.1"
+                    android:layout_marginBottom="30dp"
+                    android:text="체중 *"
+                    />
+                <EditText
+                    android:id="@+id/weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:paddingLeft="34dp"
+                    android:background="@drawable/rectangle_1"
+                    android:hint="예) 55"
+                    android:textColorHint="#B9CAC9"
+                    android:inputType="number"
+                    android:textSize="26sp"
+                    android:text="@={RegisterViewModel.weight}" />
+            </LinearLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:background="@drawable/radius"
+                    android:backgroundTint="@color/GREEN_1"
+                    android:layout_marginTop="2dp"
+                    android:lineSpacingExtra="14sp"
+                    android:onClick="@{() -> RegisterViewModel.onRegisterClicked()}"
+                    bind:toastMessage="@{RegisterViewModel.toastMessage}"
+                    android:text="회원가입"
+                    android:textAppearance="@style/text_size_28_FFF"/>
+            </LinearLayout>
+            </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

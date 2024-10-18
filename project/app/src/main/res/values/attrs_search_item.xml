@@ -1,0 +1,9 @@
+<resources>
+    <declare-styleable name="SearchItem">
+        <attr name="name" format="string" />
+        <attr name="birth" format="string" />
+        <attr name="result" format="string" />
+        <attr name="last_date" format="string" />
+        <attr name="status" format="integer" />
+    </declare-styleable>
+</resources>

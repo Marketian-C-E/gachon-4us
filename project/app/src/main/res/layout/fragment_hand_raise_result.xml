@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f3f8f7"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="22dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- START HEADER 정도 -->
+            <LinearLayout
+                android:paddingHorizontal="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="26sp"
+                    android:textColor="@color/black"
+                    android:letterSpacing="-0.01"
+                    android:lineSpacingExtra="-9sp"
+                    android:layout_marginTop="35dp"
+                    android:text="측정이 종료되었습니다."
+                    android:fontFamily="@font/pretendard_bold"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/test_result_header_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="26sp"
+                        android:textColor="@color/black"
+                        android:letterSpacing="-0.01"
+                        android:text="{}"
+                        android:fontFamily="@font/pretendard_regular"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="26sp"
+                        android:textColor="#999999"
+                        android:letterSpacing="-0.01"
+                        android:text="님의 결과입니다."
+                        android:fontFamily="@font/pretendard_regular"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- END HEADER 정도 -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="31dp"
+                android:background="@color/c4dad5" />
+
+            <!-- START 검사 결과 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/measurement_item_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:textColor="#252525"
+                    android:letterSpacing="-0.01"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="{}" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="24sp"
+                    android:textColor="#999999"
+                    android:letterSpacing="-0.01"
+                    android:fontFamily="@font/pretendard_regular"
+                    android:text=" 검사결과" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="21dp"
+                android:paddingBottom="40dp"
+                android:paddingTop="30dp"
+                android:background="@color/white"
+                >
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/result_panel_pnp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="68dp"
+                    android:paddingVertical="50dp"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:id="@+id/pnp_seconds_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="30sp"
+                        android:textColor="#666666"
+                        android:lineSpacingExtra="4sp"
+                        android:layout_marginBottom="24dp"
+                        android:text="0초"/>
+
+                    <TextView
+                        android:id="@+id/pnp_grade_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="42dp"
+                        android:background="@drawable/radius"
+                        android:backgroundTint="@color/light_blue_400"
+                        android:textStyle="normal"
+                        android:textSize="45sp"
+                        android:textColor="#ffffff"
+                        android:lineSpacingExtra="-11sp"
+                        android:gravity="center_horizontal"
+                        android:text="Failed"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/result_panel_count_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/count_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="35sp"
+                            android:textColor="#00b0a6"
+                            android:letterSpacing="-0.05"
+                            android:text="10" />
+
+                        <TextView
+                            android:id="@+id/timer_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textStyle="normal"
+                            android:textSize="25sp"
+                            android:textColor="#666666"
+                            android:text="(30초)" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="1dp"
+                        android:layout_height="223dp"
+                        android:background="#c8c8c8">
+                    </View>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/grade_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/pretendard_bold"
+                            android:textStyle="bold"
+                            android:textSize="25sp"
+                            android:textColor="#666666"
+                            android:letterSpacing="-0.01"
+                            android:lineSpacingExtra="0sp"
+                            android:layout_marginBottom="30dp"
+                            android:text="{} 등급"/>
+
+                        <co.kr.myfitnote.core.ui.GradeView
+                            android:id="@+id/grade_ui_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp" />
+                    </LinearLayout>
+                    <!--                    <LinearLayout-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_gravity="center"-->
+                    <!--                        android:orientation="vertical">-->
+                    <!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content">-->
+
+                    <!--                            <ImageView-->
+                    <!--                                android:id="@+id/imageView"-->
+                    <!--                                android:layout_width="250dp"-->
+                    <!--                                android:layout_height="250dp"-->
+                    <!--                                android:src="@drawable/asset_graph"-->
+                    <!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--                                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                                app:layout_constraintStart_toStartOf="parent" />-->
+
+                    <!--                            <TextView-->
+                    <!--                                android:id="@+id/grade_view"-->
+                    <!--                                android:layout_width="wrap_content"-->
+                    <!--                                android:layout_height="wrap_content"-->
+                    <!--                                android:text="0"-->
+                    <!--                                android:textColor="#ffffff"-->
+                    <!--                                android:textSize="42sp"-->
+                    <!--                                android:textStyle="bold"-->
+                    <!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--                                app:layout_constraintEnd_toEndOf="@+id/imageView"-->
+                    <!--                                app:layout_constraintStart_toStartOf="@+id/imageView"-->
+                    <!--                                app:layout_constraintTop_toTopOf="@+id/imageView"-->
+                    <!--                                app:layout_constraintVertical_bias="0.597" />-->
+                    <!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_gravity="center"-->
+                    <!--                            android:textStyle="normal"-->
+                    <!--                            android:textSize="30sp"-->
+                    <!--                            android:textColor="#666666"-->
+                    <!--                            android:text="등급" />-->
+                    <!--                    </LinearLayout>-->
+                </LinearLayout>
+
+                <!--                <TableLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="21dp">-->
+                <!--                    <TableRow-->
+                <!--                        android:minHeight="80dp"-->
+                <!--                        android:background="@drawable/radius"-->
+                <!--                        android:backgroundTint="#DEF1ED"-->
+                <!--                        android:gravity="center"-->
+                <!--                        >-->
+                <!--                        <TextView-->
+                <!--                            android:id="@+id/tv_result_label"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_weight="1"-->
+                <!--                            android:textSize="26sp"-->
+                <!--                            android:textFontWeight="700"-->
+                <!--                            android:textAlignment="center"-->
+                <!--                            android:text="횟수"-->
+                <!--                            android:textColor="#8FBCB3"-->
+                <!--                            android:fontFamily="@font/font_family"-->
+                <!--                            />-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_weight="1"-->
+                <!--                            android:textSize="26sp"-->
+                <!--                            android:textFontWeight="700"-->
+                <!--                            android:textAlignment="center"-->
+                <!--                            android:text="등급"-->
+                <!--                            android:textColor="#8FBCB3"-->
+                <!--                            android:fontFamily="@font/font_family" />-->
+                <!--                    </TableRow>-->
+
+                <!--                    <TableRow-->
+                <!--                        android:minHeight="80dp"-->
+                <!--                        android:background="@drawable/radius"-->
+                <!--                        android:backgroundTint="#FFF"-->
+                <!--                        >-->
+                <!--                        <LinearLayout-->
+                <!--                            android:layout_width="match_parent"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_weight="1"-->
+                <!--                            android:layout_gravity="center"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:orientation="horizontal">-->
+
+                <!--                            <TextView-->
+                <!--                                android:id="@+id/count_view"-->
+                <!--                                android:layout_width="wrap_content"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:textFontWeight="700"-->
+                <!--                                android:fontFamily="@font/font_family"-->
+                <!--                                android:letterSpacing="-0.01"-->
+                <!--                                android:text="00"-->
+                <!--                                android:textColor="#474747"-->
+                <!--                                android:textSize="26sp" />-->
+
+                <!--                            <TextView-->
+                <!--                                android:layout_width="wrap_content"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:textFontWeight="700"-->
+                <!--                                android:fontFamily="@font/font_family"-->
+                <!--                                android:letterSpacing="-0.01"-->
+                <!--                                android:text="회"-->
+                <!--                                android:textColor="#ffffff"-->
+                <!--                                android:textSize="26sp" />-->
+
+                <!--                        </LinearLayout>-->
+
+                <!--                        <TextView-->
+                <!--                            android:id="@+id/grade_view"-->
+                <!--                            android:layout_width="match_parent"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_gravity="center"-->
+                <!--                            android:textFontWeight="700"-->
+                <!--                            android:layout_weight="1"-->
+                <!--                            android:textAlignment="center"-->
+                <!--                            android:text="1"-->
+                <!--                            android:textColor="#474747"-->
+                <!--                            android:letterSpacing="-0.01"-->
+                <!--                            android:fontFamily="@font/font_family"-->
+                <!--                            android:textSize="26sp" />-->
+                <!--                    </TableRow>-->
+                <!--                </TableLayout>-->
+            </LinearLayout>
+            <!-- END 검사 결과 -->
+
+            <!-- START 패턴 분석 -->
+            <LinearLayout
+                android:id="@+id/layout_pattern_analysis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="63dp"
+                    android:background="@color/c4dad5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:letterSpacing="-0.01"
+                    android:textColor="#252525"
+                    android:textFontWeight="700"
+                    android:fontFamily="@font/font_family"
+                    android:textAlignment="center"
+                    android:text="패턴분석" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="392dp"
+                    android:backgroundTint="#fff"
+                    android:layout_marginTop="21dp"
+                    android:padding="15dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/radius">
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/line_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="30dp"
+                android:background="#C4DAD5"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:letterSpacing="-0.01"
+                android:textColor="#252525"
+                android:textFontWeight="700"
+                android:fontFamily="@font/font_family"
+                android:textAlignment="center"
+                android:text="관절 변화" />
+
+            <TableLayout
+                android:layout_marginTop="21dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="52dp"
+                android:background="@color/white">
+                <TableRow
+                    android:paddingLeft="42dp"
+                    android:paddingTop="36dp"
+                    >
+
+                    <TextView
+                        android:drawableLeft="@drawable/circle_blue"
+                        android:drawableTint="@color/GREEN_1"
+                        android:drawablePadding="7dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="16sp"
+                        android:textColor="#666666"
+                        android:letterSpacing="-0.01"
+                        android:lineSpacingExtra="-4sp"
+                        android:text="관절 안정성" />
+                </TableRow>
+
+                <TableRow
+                    android:paddingHorizontal="79dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <FrameLayout
+                            android:layout_width="140dp"
+                            android:layout_height="140dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/asset_target" />
+                            <com.github.mikephil.charting.charts.ScatterChart
+                                android:id="@+id/handChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+                        </FrameLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="15sp"
+                            android:textColor="#666666"
+                            android:letterSpacing="-0.01"
+                            android:lineSpacingExtra="0sp"
+                            android:layout_gravity="center"
+                            android:text="손목 변화"/>
+                    </LinearLayout>
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- START BOTTOM BUTTON -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="35dp"
+        android:paddingHorizontal="50dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/home_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="메뉴로 이동"
+            android:textColor="#fff"
+            android:backgroundTint="@color/GREEN_1"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:background="@drawable/radius"/>
+    </LinearLayout>
+    <!-- END BOTTOM BUTTON -->
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="grid_size_list">
+        <item>3x3</item>
+        <item>4x4</item>
+        <item>5x5</item>
+        <item>6x6</item>
+    </string-array>
+
+    <string-array name="leg_spinner_list">
+        <item>왼발</item>
+        <item>오른발</item>
+    </string-array>
+
+    <string-array name="eye_spinner_list">
+        <item>눈뜨고</item>
+        <item>눈감고</item>
+    </string-array>
+
+    <string-array name="hand_list">
+        <item>왼손</item>
+        <item>오른손</item>
+    </string-array>
+</resources>

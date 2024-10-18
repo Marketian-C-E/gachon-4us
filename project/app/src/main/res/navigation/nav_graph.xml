@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="co.kr.myfitnote.cm.ui.home.HomeFragment"
+        android:label="HOME"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_physicalTestMenuActivity"
+            app:destination="@id/physicalTestMenuActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_exerciseScreenFragment"
+            app:destination="@id/exerciseScreenFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_myScreenFragment"
+            app:destination="@id/myScreenFragment" />
+        <action
+            android:id="@+id/action_homeFragment_self"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cmprhResultExtractionFragment"
+            app:destination="@id/cmprhResultExtractionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_heartRateFragment"
+            app:destination="@id/heartRateFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/physicalTestMenuActivity"
+        android:name="co.kr.myfitnote.views.PhysicalTestMenuActivity"
+        android:label="PhysicalTestMenuActivity" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="co.kr.myfitnote.views.fragments.notificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/exerciseScreenFragment"
+        android:name="co.kr.myfitnote.views.fragments.tutorial.ExerciseScreenFragment"
+        android:label="fragment_exercise_screen"
+        tools:layout="@layout/fragment_exercise_screen" >
+        <action
+            android:id="@+id/action_exerciseScreenFragment_to_exerciseFtScreenFragment"
+            app:destination="@id/exerciseFtScreenFragment" />
+        <action
+            android:id="@+id/action_exerciseScreenFragment_to_exercise100ScreenFragment"
+            app:destination="@id/exercise100ScreenFragment" />
+        <action
+            android:id="@+id/action_exerciseScreenFragment_to_exerciseSftScreenFragment"
+            app:destination="@id/exerciseSftScreenFragment" />
+        <action
+            android:id="@+id/action_exerciseScreenFragment_to_exerciseDaekyo"
+            app:destination="@id/exerciseDaekyo" />
+    </fragment>
+    <fragment
+        android:id="@+id/myScreenFragment"
+        android:name="co.kr.myfitnote.cm.ui.my.MyScreenFragment"
+        android:label="fragment_my_screen"
+        tools:layout="@layout/fragment_my_screen" />
+    <fragment
+        android:id="@+id/exercise100ScreenFragment"
+        android:name="co.kr.myfitnote.views.fragments.tutorial.Exercise100ScreenFragment"
+        android:label="fragment_exercise100_screen"
+        tools:layout="@layout/fragment_exercise100_screen" >
+        <action
+            android:id="@+id/action_exercise100ScreenFragment_to_walkTestActivity"
+            app:destination="@id/walkTestActivity" />
+        <action
+            android:id="@+id/action_exercise100ScreenFragment_to_seatDownUpTestActivity"
+            app:destination="@id/seatDownUpTestActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseSftScreenFragment"
+        android:name="co.kr.myfitnote.views.fragments.tutorial.ExerciseSftScreenFragment"
+        android:label="fragment_exercise_sft_screen"
+        tools:layout="@layout/fragment_exercise_sft_screen" />
+    <fragment
+        android:id="@+id/exerciseFtScreenFragment"
+        android:name="co.kr.myfitnote.views.fragments.tutorial.ExerciseFtScreenFragment"
+        android:label="fragment_exercise_ft_screen"
+        tools:layout="@layout/fragment_exercise_ft_screen" >
+        <action
+            android:id="@+id/action_exerciseFtScreenFragment_to_singleLegStanceTestActivity"
+            app:destination="@id/singleLegStanceTestActivity" />
+        <action
+            android:id="@+id/action_exerciseFtScreenFragment_to_singleLegStanceTestResultActivity"
+            app:destination="@id/singleLegStanceTestResultActivity" />
+        <action
+            android:id="@+id/action_exerciseFtScreenFragment_to_singlegStanceTestForDisabledActivity"
+            app:destination="@id/singlegStanceTestForDisabledActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/singleLegStanceTestActivity"
+        android:name="co.kr.myfitnote.views.SingleLegStanceTestActivity"
+        android:label="SingleLegStanceTestActivity" />
+    <activity
+        android:id="@+id/walkTestActivity"
+        android:name="co.kr.myfitnote.views.WalkTestActivity"
+        android:label="WalkTestActivity" />
+    <activity
+        android:id="@+id/seatDownUpTestActivity"
+        android:name="co.kr.myfitnote.views.SeatDownUpTestActivity"
+        android:label="SeatDownUpTestActivity" />
+    <activity
+        android:id="@+id/singleLegStanceTestResultActivity"
+        android:name="co.kr.myfitnote.views.SingleLegStanceTestResultActivity"
+        android:label="SingleLegStanceTestResultActivity" />
+    <fragment
+        android:id="@+id/cmprhResultExtractionFragment"
+        android:name="co.kr.myfitnote.views.fragments.CmprhResultExtractionFragment"
+        android:label="CmprhResultExtractionFragment" >
+        <action
+            android:id="@+id/action_cmprhResultExtractionFragment_to_cmprhResultFragment"
+            app:destination="@id/cmprhResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cmprhResultFragment"
+        android:name="co.kr.myfitnote.views.fragments.CmprhResultFragment"
+        android:label="fragment_cmprh_result"
+        tools:layout="@layout/fragment_cmprh_result" >
+
+        <action
+            android:id="@+id/action_cmprhResultFragment_to_resultPage3"
+            app:destination="@id/resultPage3" />
+    </fragment>
+    <activity
+        android:id="@+id/singlegStanceTestForDisabledActivity"
+        android:name="co.kr.myfitnote.views.SinglegStanceTestForDisabledActivity"
+        android:label="SinglegStanceTestForDisabledActivity" />
+    <fragment
+        android:id="@+id/exerciseDaekyo"
+        android:name="co.kr.myfitnote.views.fragments.tutorial.ExerciseDaekyo"
+        android:label="fragment_exercise_daekyo"
+        tools:layout="@layout/fragment_exercise_daekyo" >
+        <action
+            android:id="@+id/action_exerciseDaekyo_to_walkTestActivity"
+            app:destination="@id/walkTestActivity" />
+        <action
+            android:id="@+id/action_exerciseDaekyo_to_seatDownUpTestActivity"
+            app:destination="@id/seatDownUpTestActivity" />
+        <action
+            android:id="@+id/action_exerciseDaekyo_to_singleLegStanceTestActivity"
+            app:destination="@id/singleLegStanceTestActivity" />
+        <action
+            android:id="@+id/action_exerciseDaekyo_to_romMenuFragment"
+            app:destination="@id/romMenuFragment" />
+        <action
+            android:id="@+id/action_exerciseDaekyo_to_poseMenuFragment"
+            app:destination="@id/poseMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/romMenuFragment"
+        android:name="co.kr.myfitnote.views.rom.RomMenuFragment"
+        android:label="RomMenuFragment" />
+    <fragment
+        android:id="@+id/poseMenuFragment"
+        android:name="co.kr.myfitnote.views.pose.PoseMenuFragment"
+        android:label="PoseMenuFragment" >
+        <action
+            android:id="@+id/action_poseMenuFragment_to_poseMeasurementActivity"
+            app:destination="@id/poseMeasurementActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/poseMeasurementActivity"
+        android:name="co.kr.myfitnote.views.pose.PoseMeasurementActivity"
+        android:label="PoseMeasurementActivity" />
+    <fragment
+        android:id="@+id/heartRateFragment"
+        android:name="co.kr.myfitnote.views.fragments.polar.HeartRateFragment"
+        android:label="fragment_heart_rate"
+        tools:layout="@layout/fragment_heart_rate" />
+    <fragment
+        android:id="@+id/resultPage3"
+        android:name="co.kr.myfitnote.cm.ui.measurement.ChangingResult"
+        android:label="fragment_result_page3"
+        tools:layout="@layout/fragment_result_page3" />
+</navigation>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F8F7"
+    tools:context=".views.fragments.tutorial.ExerciseSftScreenFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="71dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/font_family"
+        android:letterSpacing="-0.01"
+        android:text="종합결과 추출"
+        android:textColor="#1C1C1C"
+        android:textFontWeight="700"
+        android:textSize="43sp" />
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 검사 버튼 -->
+        <LinearLayout
+            android:id="@+id/test_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="45dp"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#F3F8F7"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/result_extraction_btn"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/radius"
+        android:backgroundTint="@color/GREEN_1"
+        android:lineSpacingExtra="14sp"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="25dp"
+        android:text="결과추출"
+        android:textAppearance="@style/text_size_28_FFF" />
+</LinearLayout>

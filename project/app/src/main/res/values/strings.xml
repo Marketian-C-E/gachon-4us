@@ -1,0 +1,298 @@
+<resources>
+    <string name="app_name">4US 건강헬스</string>
+    <string name="preference_file_key">wchangup</string>
+    <string name="question_main_title">검사 전 설문</string>
+    <string name="copyright">ⓒ COPYLIGHT EXERCOWORK</string>
+    <string name="app_name_korean">비대면 신체기능 검사</string>
+
+    <!-- Server Url -->
+    <string name="host_url">http://marketian.co.kr:7575</string>
+    <string name="client_result_uri">/manage</string>
+
+    <!-- Dialog Label -->
+    <string name="dialog_label_positive">확인</string>
+    <string name="dialog_label_nagative">취소</string>
+
+    <!-- 검사 전 설문 -->
+    <string-array name="questions">
+        <item index="1">의사에게 심장질환 진단을 받았거나, 신체활동/운동 삼가에 대한 말을 들은 적이 있습니까?</item>
+        <item index="2">운동을 할 때 가슴에 통증이 있습니까?</item>
+        <item index="3">지난달 휴식 시에도 가슴에 통증을 느낀 적이 있습니까?</item>
+        <item index="4">어지럼증으로 쓰러졌거나 의식을 잃은 적이 있습니까?</item>
+        <item index="5">운동할 때 심해질 수 있는 관절이나 뼈의 문제(예: 허리, 무릎 또는 고관절)가 있습니까?</item>
+        <item index="6">심장질환 등으로 의사에게 처방받아 복용하는 약이 있습니까?</item>
+        <item index="7">신체활동/운동을 해서는 안 되는 다른 이유가 있습니까?</item>
+    </string-array>
+    <string name="question_before_title">PAR-Q 설문</string>
+    <string name="question_before_desc">측정을 하기 전 확인 사항입니다.\n질문을 잘 읽고 정직하게 대답해 주세요.</string>
+    <string name="question_after_title">설문 종료</string>
+    <string name="question_after_desc">모든 설문이 종료되었습니다.\n제출하시겠습니까?</string>
+    <string name="question_fail_desc">조건에 맞지 않아 다음 단계로 진행할 수 없습니다.</string>
+
+    <!-- 로그인 -->
+    <string name="login_id_hint">아이디를 입력하세요.</string>
+    <string name="login_pw_hint">비밀번호를 입력하세요.</string>
+    <string name="login_fail">로그인 도중 문제가 발생하였습니다.</string>
+
+    <!-- 회원가입 -->
+    <string name="register_header">신규 회원의 정보를 입력해 주세요.</string>
+    <string name="register_subtitle">검사를 위해 작성해 주세요.</string>
+    <string name="title_activity_gait_speed_test">GaitSpeedTestActivity</string>
+
+
+    <!-- Button Label -->
+    <string name="label_quick_menu">간편 메뉴</string>
+    <string name="label_search_client">기존 이용자 검색</string>
+    <string name="label_create_client">신규 이용자 등록</string>
+    <string name="label_direct_measurement">체험하기</string>
+    <string name="label_result_of_program">결과지 출력</string>
+
+    <!-- 이용자 등록 -->
+    <string name="cm_register_header">신규 이용자 등록을 위해\n아래 정보를 입력해 주세요.</string>
+    <string name="cm_register_button_label">신규 이용자 등록</string>
+
+    <string name="cm_register_question_1">Q. 의사에게 다음 질병이 있다고 들은 적이 있습니까?</string>
+
+    <!-- 이용 약관 -->
+    <string name="policy">
+
+제1조 (목적)\n
+EXERCOWORK(이하 "회사"라 함)는 이용자의 개인정보를 중요시하며, 정보통신망법, 개인정보보호법 등 관련 법령을 준수하고 있습니다. 회사는 개인정보취급방침을 통하여 이용자가 제공한 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.\n
+
+제2조 (수집하는 개인정보의 항목 및 수집방법)\n
+회사는 다음의 개인정보 항목을 수집할 수 있습니다.\n
+
+이용자의 식별정보: 아이디(ID), 비밀번호\n
+운동 데이터: 심박수 데이터, 운동 자세 데이터\n
+개인정보는 다음과 같은 방법으로 수집될 수 있습니다.\n
+이용자로부터의 직접 제공\n
+카메라와 블루투스를 통한 운동 데이터 수집\n
+제3조 (개인정보의 수집 및 이용목적)\n
+회사는 수집한 개인정보를 다음의 목적을 위해 이용합니다.\n
+
+서비스 제공 및 관리\n
+이용자 식별 및 인증\n
+개인맞춤형 서비스 제공\n
+서비스 개선 및 신규 서비스 개발\n
+제4조 (개인정보의 보유 및 이용기간)\n
+회사는 이용자의 개인정보를 수집 및 이용목적 달성 후에는 지체 없이 파기합니다. 단, 법령에 따라 보존할 필요가 있는 경우 해당 법령에 따라 보존합니다.\n
+
+제5조 (개인정보의 파기절차 및 방법)\n
+회사는 개인정보의 파기를 다음과 같은 절차와 방법으로 진행합니다.\n
+
+파기절차: 개인정보의 수집 및 이용목적이 달성된 후 지체 없이 파기합니다.\n
+파기방법: 전자적 방법으로 영구 삭제하거나 파기합니다.\n
+제6조 (개인정보의 제3자 제공)\n
+회사는 원칙적으로 이용자의 개인정보를 제3자에게 제공하지 않습니다. 다만, 이용자의 동의가 있는 경우 또는 법령에 의한 경우에는 예외로 합니다.\n
+
+제7조 (개인정보의 안전성 확보조치)\n
+회사는 개인정보를 안전하게 보호하기 위해 다음과 같은 조치를 취합니다.\n
+
+개인정보 암호화\n
+불법적 접근에 대한 보안 시스템 구축 및 운영\n
+개인정보 처리 직원의 교육\n
+제8조 (이용자 및 법정대리인의 권리와 그 행사방법)\n
+이용자 및 법정대리인은 개인정보에 대한 열람, 정정, 삭제, 처리정지 요구 등의 권리를 행사할 수 있습니다. 이에 대한 행사방법은 개인정보취급방침에 명시되어 있습니다.\n
+
+제9조 (개인정보관리책임자 및 담당자의 연락처)\n
+회사는 개인정보 보호를 위해 개인정보 관리책임자 및 담당자를 지정하고 있습니다. 관련 문의사항은 아래의 연락처로 문의하실 수 있습니다.\n
+
+개인정보관리책임자: [관리책임자의 이름, 연락처, 이메일 주소]\n
+제10조 (개인정보처리방침의 변경에 관한 사항)\n
+본 개인정보처리방침의 내용 추가, 삭제 및 수정이 있을 시에는 변경 사항을 공지사항 또는 이메일을 통해 통지합니다.\n
+    </string>
+    <string name="privacy">
+
+제1조 (목적)\n
+본 개인정보 처리방침은 EXERCOWORK(이하 "회사"라 함)가 제공하는 서비스 이용과 관련하여 회사와 회원 간의 개인정보 보호 및 권리 보호에 관한 사항을 규정함을 목적으로 합니다.\n
+
+제2조 (정의)\n
+본 개인정보 처리방침에서 사용하는 용어의 정의는 다음과 같습니다.\n
+"서비스"라 함은 회사가 제공하는 모든 서비스를 의미합니다.\n
+"회원"이라 함은 본 개인정보 처리방침에 동의하고 회사와 이용계약을 체결한 자를 의미합니다.\n
+"아이디(ID)"라 함은 회원의 식별과 서비스 이용을 위하여 회원이 정하고 회사가 승인하는 문자와 숫자의 조합을 의미합니다.\n
+"비밀번호"라 함은 회원의 동일성 확인과 회원정보의 보호를 위하여 회원 자신이 정한 문자와 숫자의 조합을 의미합니다.\n
+"이용계약"이라 함은 서비스 이용과 관련하여 회사와 회원 간에 체결하는 계약을 의미합니다.\n
+"해지"라 함은 회사 또는 회원이 이용계약을 종료시키는 것을 의미합니다.\n
+
+제3조 (개인정보의 수집 및 이용목적)\n
+회사는 다음의 목적을 위하여 회원의 개인정보를 수집 및 이용합니다.\n
+가. 서비스 제공에 따른 계약 이행 및 서비스 제공에 관한 사항\n
+나. 회원 관리\n
+다. 서비스의 개선 및 신규 서비스 개발\n
+라. 블루투스를 통한 심박수 데이터 수집 및 운동 상태 분석\n
+마. 카메라를 활용한 운동 자세 분석 및 개선\n
+
+회사는 회원의 별도 동의를 받은 경우나 법령에 규정된 경우를 제외하고는 이용자의 개인정보를 해당 목적 범위를 초과하여 이용하거나 제3자에게 제공하지 않습니다.\n
+
+제4조 (개인정보의 보유 및 이용기간)\n
+회사는 회원이 회원자격을 유지하는 동안에 한하여 개인정보를 보유 및 이용합니다. 다만, 회원이 탈퇴를 요청한 경우 또는 서비스 제공 목적을 달성한 경우에는 지체 없이 해당 정보를 파기합니다.\n
+
+블루투스를 통한 심박수 데이터 및 카메라를 통한 운동 자세 데이터는 분석 및 개선을 위한 목적으로 사용되며, 이용자가 명시적으로 삭제를 요청하지 않는 한 회사의 데이터베이스에 보존됩니다.\n
+
+제5조 (개인정보의 파기절차 및 방법)\n
+회사는 회원의 개인정보를 원칙적으로 개인정보의 수집 및 이용목적이 달성된 후에는 지체 없이 파기합니다. 다만, 다른 법령에 따라 보존하여야 하는 경우에는 해당 법령에 따라 보존합니다.\n
+
+카메라를 통한 운동 자세 데이터 및 블루투스를 통한 심박수 데이터는 분석을 위해 일정 기간 보관되며, 분석 목적이 달성된 후에는 복구 및 파기됩니다.\n
+
+제6조 (개인정보의 안전성 확보조치)\n
+회사는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.\n
+가. 카메라 및 블루투스를 통한 데이터의 암호화\n
+나. 불법적인 접근 및 변경, 유출, 손실, 파괴 또는 훼손으로부터 개인정보를 보호하기 위한 물리적, 기술적, 관리적 조치\n
+
+개인정보처리시스템에 접근 권한을 가진 자는 이용자 본인에 한정되며, 서비스 제공과 관련된 업무 수행시에만 개인정보에 접근할 수 있도록 하고 있습니다.\n
+
+제7조 (개인정보의 제3자 제공)\n
+회사는 원칙적으로 회원의 개인정보를 제3자에게 제공하지 않습니다. 다만, 다음의 경우에는 예외로 합니다.\n
+가. 회원의 동의가 있는 경우\n
+나. 서비스 제공에 따른 계약 이행을 위하여 필요한 경우\n
+다. 법령에 의해 요구되는 경우\n
+    </string>
+
+    <!-- ML Kit -->
+    <!-- Settings related strings. -->
+    <string name="pref_screen" translatable="false">ps</string>
+    <string name="pref_screen_title_live_preview" translatable="false">Live preview settings</string>
+    <string name="pref_screen_title_still_image" translatable="false">Still image settings</string>
+    <string name="pref_screen_title_camerax_live_preview" translatable="false">CameraX live preview settings</string>
+    <string name="pref_screen_title_cameraxsource_demo" translatable="false">CameraXSource live preview settings</string>
+    <string name="pref_category_info" translatable="false">Detection Info</string>
+    <string name="pref_category_face_detection" translatable="false">Face Detection</string>
+    <string name="pref_category_object_detection" translatable="false">Object Detection / Custom Object Detection</string>
+    <string name="pref_category_automl" translatable="false">AutoML Image Labeling</string>
+    <string name="pref_category_pose_detection" translatable="false">Pose Detection</string>
+    <string name="pref_category_segmentation" translatable="false">Selfie Segmentation</string>
+    <string name="pref_category_text_recognition" translatable="false">Text Recognition</string>
+    <string name="pref_category_barcode_scanning" translatable="false">Barcode Scanning</string>
+
+    <!-- Strings for camera settings. -->
+    <string name="pref_category_key_camera" translatable="false">pckc</string>
+    <string name="pref_category_title_camera" translatable="false">Camera</string>
+    <string name="pref_key_rear_camera_preview_size" translatable="false">rcpvs</string>
+    <string name="pref_key_rear_camera_picture_size" translatable="false">rcpts</string>
+    <string name="pref_key_front_camera_preview_size" translatable="false">fcpvs</string>
+    <string name="pref_key_front_camera_picture_size" translatable="false">fcpts</string>
+    <string name="pref_key_camerax_rear_camera_target_resolution" translatable="false">crctas</string>
+    <string name="pref_key_camerax_front_camera_target_resolution" translatable="false">cfctas</string>
+    <string name="pref_key_camera_live_viewport" translatable="false">clv</string>
+    <string name="pref_title_rear_camera_preview_size" translatable="false">Rear camera preview size</string>
+    <string name="pref_title_front_camera_preview_size" translatable="false">Front camera preview size</string>
+    <string name="pref_title_camerax_rear_camera_target_resolution" translatable="false">CameraX rear camera target resolution</string>
+    <string name="pref_title_camerax_front_camera_target_resolution" translatable="false">CameraX front camera target resolution</string>
+    <string name="pref_title_camera_live_viewport" translatable="false">Enable live viewport</string>
+    <string name="pref_summary_camera_live_viewport" translatable="false">Do not block camera preview drawing on detection</string>
+
+    <!-- Strings for info preference. -->
+    <string name="pref_title_info_hide" translatable="false">Hide detection info</string>
+    <string name="pref_key_info_hide" translatable="false">ih</string>
+
+    <!-- Strings for barcode scanning preference. -->
+    <string name="pref_key_enable_auto_zoom" translatable="false">eaz</string>
+    <string name="pref_title_enable_auto_zoom" translatable="false">Enable auto zoom</string>
+
+    <!-- Strings for text recognition preference. -->
+    <string name="pref_title_group_recognized_text_in_blocks" translatable="false">Group recognized text in paragraphs</string>
+    <string name="pref_key_group_recognized_text_in_blocks" translatable="false">grtib</string>
+    <string name="pref_title_show_language_tag" translatable="false">Show language identified</string>
+    <string name="pref_key_show_language_tag" translatable="false">slt</string>
+    <string name="pref_title_show_text_confidence" translatable="false">Show confidence score</string>
+    <string name="pref_key_show_text_confidence" translatable="false">stc</string>
+
+    <!-- Strings for object detector enable multiple objects preference. -->
+    <string name="pref_title_object_detector_enable_multiple_objects" translatable="false">Enable multiple objects</string>
+    <string name="pref_key_live_preview_object_detector_enable_multiple_objects" translatable="false">lpodemo</string>
+    <string name="pref_key_still_image_object_detector_enable_multiple_objects" translatable="false">siodemo</string>
+
+    <!-- Strings for object detector enable classification preference. -->
+    <string name="pref_title_object_detector_enable_classification" translatable="false">Enable classification</string>
+    <string name="pref_key_live_preview_object_detector_enable_classification" translatable="false">lpodec</string>
+    <string name="pref_key_still_image_object_detector_enable_classification" translatable="false">siodec</string>
+
+    <!-- Strings for face detector landmark mode preference. -->
+    <string name="pref_title_face_detector_landmark_mode" translatable="false">Landmark mode</string>
+    <string name="pref_key_live_preview_face_detection_landmark_mode" translatable="false">lpfdlm</string>
+    <string name="pref_entries_face_detector_landmark_mode_no_landmarks" translatable="false">No landmarks</string>
+    <string name="pref_entries_face_detector_landmark_mode_all_landmarks" translatable="false">All landmarks</string>
+    <!-- The following entry values must match the ones in FaceDetectorOptions#LandmarkMode -->
+    <string name="pref_entry_values_face_detector_landmark_mode_no_landmarks" translatable="false">1</string>
+    <string name="pref_entry_values_face_detector_landmark_mode_all_landmarks" translatable="false">2</string>
+
+    <!-- Strings for face detector contour mode preference. -->
+    <string name="pref_title_face_detector_contour_mode" translatable="false">Contour mode</string>
+    <string name="pref_key_live_preview_face_detection_contour_mode" translatable="false">lpfdcm</string>
+    <string name="pref_entries_face_detector_contour_mode_no_contours" translatable="false">No contours</string>
+    <string name="pref_entries_face_detector_contour_mode_all_contours" translatable="false">All contours</string>
+    <!-- The following entry values must match the ones in FaceDetectorOptions#ContourMode -->
+    <string name="pref_entry_values_face_detector_contour_mode_no_contours" translatable="false">1</string>
+    <string name="pref_entry_values_face_detector_contour_mode_all_contours" translatable="false">2</string>
+
+    <!-- Strings for face detector classification mode preference. -->
+    <string name="pref_title_face_detector_classification_mode" translatable="false">Classification mode</string>
+    <string name="pref_key_live_preview_face_detection_classification_mode" translatable="false">lpfdcfm</string>
+    <string name="pref_entries_face_detector_classification_mode_no_classifications" translatable="false">No classifications</string>
+    <string name="pref_entries_face_detector_classification_mode_all_classifications" translatable="false">All classifications</string>
+    <!-- The following entry values must match the ones in FaceDetectorOptions#ClassificationMode -->
+    <string name="pref_entry_values_face_detector_classification_mode_no_classifications" translatable="false">1</string>
+    <string name="pref_entry_values_face_detector_classification_mode_all_classifications" translatable="false">2</string>
+
+    <!-- Strings for face detector performance mode preference. -->
+    <string name="pref_title_face_detector_performance_mode" translatable="false">Performance mode</string>
+    <string name="pref_key_live_preview_face_detection_performance_mode" translatable="false">lpfdpm</string>
+    <string name="pref_entries_face_detector_performance_mode_fast" translatable="false">Fast</string>
+    <string name="pref_entries_face_detector_performance_mode_accurate" translatable="false">Accurate</string>
+    <!-- The following entry values must match the ones in FaceDetectorOptions#PerformanceMode -->
+    <string name="pref_entry_values_face_detector_performance_mode_fast" translatable="false">1</string>
+    <string name="pref_entry_values_face_detector_performance_mode_accurate" translatable="false">2</string>
+
+    <!-- Strings for face detector face tracking preference. -->
+    <string name="pref_title_face_detector_face_tracking" translatable="false">Face tracking</string>
+    <string name="pref_key_live_preview_face_detection_face_tracking" translatable="false">lpfdft</string>
+
+    <!-- Strings for face detector min face size preference. -->
+    <string name="pref_title_face_detector_min_face_size" translatable="false">Minimum face size</string>
+    <string name="pref_key_live_preview_face_detection_min_face_size" translatable="false">lpfdmfs</string>
+    <string name="pref_dialog_message_face_detector_min_face_size" translatable="false">Proportion of the head width to the image width, and the valid value range is [0.0, 1.0]</string>
+    <string name="pref_toast_invalid_min_face_size" translatable="false">Minimum face size must be a float value and in the range [0.0, 1.0]</string>
+
+    <!-- Strings for pose detector performance mode preference. -->
+    <string name="pref_title_pose_detector_performance_mode" translatable="false">Performance mode</string>
+    <string name="pref_key_live_preview_pose_detection_performance_mode" translatable="false">lppdpm</string>
+    <string name="pref_key_still_image_pose_detection_performance_mode" translatable="false">sipdpm</string>
+    <string name="pref_entries_pose_detector_performance_mode_fast" translatable="false">Fast</string>
+    <string name="pref_entries_pose_detector_performance_mode_accurate" translatable="false">Accurate</string>
+    <string name="pref_entry_values_pose_detector_performance_mode_fast" translatable="false">1</string>
+    <string name="pref_entry_values_pose_detector_performance_mode_accurate" translatable="false">2</string>
+
+    <!-- Strings for pose detector prefer gpu preference. -->
+    <string name="pref_title_pose_detector_prefer_gpu" translatable="false">Prefer using GPU</string>
+    <string name="pref_key_pose_detector_prefer_gpu" translatable="false">pdpg</string>
+    <string name="pref_summary_pose_detector_prefer_gpu" translatable="false">If enabled, GPU will be used as long as it is available, stable and returns correct results. In this case, the detector will not check if GPU is really faster than CPU.</string>
+
+    <!-- Strings for pose detector showInFrameLikelihood preference. -->
+    <string name="pref_title_pose_detector_show_in_frame_likelihood" translatable="false">Show in-frame likelihood</string>
+    <string name="pref_key_live_preview_pose_detector_show_in_frame_likelihood" translatable="false">lppdsifl</string>
+    <string name="pref_key_still_image_pose_detector_show_in_frame_likelihood" translatable="false">sipdsifl</string>
+
+    <!-- Strings for pose detector z value visualization preference. -->
+    <string name="pref_title_pose_detector_visualize_z" translatable="false">Visualize z value</string>
+    <string name="pref_key_pose_detector_visualize_z" translatable="false">pdvz</string>
+    <string name="pref_title_pose_detector_rescale_z" translatable="false">Rescale z value for visualization</string>
+    <string name="pref_key_pose_detector_rescale_z" translatable="false">pdrz</string>
+
+    <!-- Strings for pose classification preference. -->
+    <string name="pref_title_pose_detector_run_classification" translatable="false">Run Classification</string>
+    <string name="pref_key_pose_detector_run_classification" translatable="false">pdrc</string>
+    <string name="pref_summary_pose_detector_run_classification" translatable="false">Classify squat and pushup poses. Count reps in streaming mode. To get the best classification results based on the current sample data, face the camera side way and make sure your full body is in the frame.</string>
+
+    <!-- Strings for segmentation preference. -->
+    <string name="pref_title_segmentation_raw_size_mask" translatable="false">Enable raw size mask</string>
+    <string name="pref_key_segmentation_raw_size_mask" translatable="false">srsm</string>
+
+    <string name="pref_group_title_face_mesh" translatable="false">Face Mesh Detection</string>
+    <string name="pref_title_face_mesh_use_case" translatable="false">Use Case</string>
+    <string name="pref_key_face_mesh_use_case" translatable="false">face_mesh_use_case</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

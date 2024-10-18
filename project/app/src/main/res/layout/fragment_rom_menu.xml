@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F8F7" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginHorizontal="57dp"
+        android:fontFamily="@font/font_family"
+        android:letterSpacing="-0.01"
+        android:text="관절가동범위 측정"
+        android:textColor="#1C1C1C"
+        android:textFontWeight="700"
+        android:textSize="27sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 검사 버튼 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="45dp"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#F3F8F7"
+            android:orientation="vertical">
+            <!-- 어깨 외전 (좌) -->
+            <LinearLayout
+                android:id="@+id/btnRomUpLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/radius"
+                android:backgroundTint="#FFF"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="40dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_family"
+                        android:letterSpacing="-0.01"
+                        android:text="어깨 외전 (좌)"
+                        android:textColor="#000"
+                        android:textFontWeight="700"
+                        android:textSize="27sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right" />
+            </LinearLayout>
+
+            <!-- 고관절 외전 (좌) -->
+            <LinearLayout
+                android:id="@+id/btnRomUpRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/radius"
+                android:backgroundTint="#FFF"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="40dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_family"
+                        android:letterSpacing="-0.01"
+                        android:text="어깨 외전 (우)"
+                        android:textColor="#000"
+                        android:textFontWeight="700"
+                        android:textSize="27sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right" />
+            </LinearLayout>
+
+            <!-- 고관절 외전 (좌) -->
+            <LinearLayout
+                android:id="@+id/btnRomDownLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/radius"
+                android:backgroundTint="#FFF"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="40dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_family"
+                        android:letterSpacing="-0.01"
+                        android:text="고관절 외전 (좌)"
+                        android:textColor="#000"
+                        android:textFontWeight="700"
+                        android:textSize="27sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right" />
+            </LinearLayout>
+
+            <!-- 고관절 외전 (우) -->
+            <LinearLayout
+                android:id="@+id/btnRomDownRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/radius"
+                android:backgroundTint="#FFF"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="40dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_family"
+                        android:letterSpacing="-0.01"
+                        android:text="고관절 외전 (우)"
+                        android:textColor="#000"
+                        android:textFontWeight="700"
+                        android:textSize="27sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/client_nav_graph"
+    app:startDestination="@id/clientHomeFragment">
+
+    <fragment
+        android:id="@+id/clientHomeFragment"
+        android:name="co.kr.myfitnote.client.ui.home.ClientHomeFragment"
+        android:label="fragment_client_home"
+        tools:layout="@layout/fragment_client_home" >
+        <action
+            android:id="@+id/action_clientHomeFragment_to_clientExerciseActivity"
+            app:destination="@id/clientExerciseActivity" />
+        <action
+            android:id="@+id/action_clientHomeFragment_to_analysisFragment"
+            app:destination="@id/analysisFragment" />
+        <action
+            android:id="@+id/action_clientHomeFragment_to_labMainActivity"
+            app:destination="@id/labMainActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/clientExerciseActivity"
+        android:name="co.kr.myfitnote.client.ui.exercise.ClientExerciseActivity"
+        android:label="ClientExerciseActivity" />
+    <fragment
+        android:id="@+id/analysisFragment"
+        android:name="co.kr.myfitnote.client.ui.analysis.AnalysisFragment"
+        android:label="fragment_analysis"
+        tools:layout="@layout/fragment_analysis" />
+    <activity
+        android:id="@+id/labMainActivity"
+        android:name="co.kr.myfitnote.lab.LabMainActivity"
+        android:label="LabMainActivity" />
+</navigation>
